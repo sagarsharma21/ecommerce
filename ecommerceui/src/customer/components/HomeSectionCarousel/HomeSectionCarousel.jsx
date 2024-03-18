@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { mens_kurta } from "../../../Data/Men/mens_kurta";
 
-const HomeSectionCarousel = () => {
+const HomeSectionCarousel = ({data, sectionName}) => {
   const responsive = {
     0: { items: 1 },
     720: { items: 2 },
@@ -27,6 +27,7 @@ const HomeSectionCarousel = () => {
   
   return (
     <div className="px-4 lg:px-8 border  ">
+      <h2 className="text-2xl font-extrabold text-gray-800 py-5">{sectionName}</h2>
       <div className="relative p-5">
         {/* HomeSectionCarousel */}
         <AliceCarousel
