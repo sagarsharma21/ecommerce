@@ -29,6 +29,7 @@ const MainCarousel = () => (
             false}
         autoPlayInterval={1000}
         infinite
+        disableButtonsControls
         // mouseTracking
         // responsive={responsive}
         //controlsStrategy="alternate"
