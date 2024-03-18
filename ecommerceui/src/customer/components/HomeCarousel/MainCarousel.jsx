@@ -25,7 +25,8 @@ const MainCarousel = () => (
     <AliceCarousel
         
         items={items}
-        autoPlay
+        autoPlay={
+            false}
         autoPlayInterval={1000}
         infinite
         // mouseTracking
