@@ -4,6 +4,8 @@ import Navigation from './customer/components/Navigation/Navigation';
 import HomePage from './customer/pages/HomePage/HomePage';
 import Footer from './customer/components/Footer/Footer';
 import Product from './customer/components/Product/Product';
+import ProductDetails from './customer/components/ProductDetails/ProductDetails';
+import ProductReviewCard from './customer/components/ProductDetails/ProductReviewCard';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <div>
         {/* <HomePage/> */}
         {/* Instead we are rendering Product Page for development */}
-        <Product/>
+        {/* <Product/> */}
+        {/* Instead we are rendering Product Details Page for development */}
+        <ProductDetails/>
       </div>
       
       <div>
