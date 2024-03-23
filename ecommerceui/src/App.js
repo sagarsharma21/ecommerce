@@ -6,6 +6,7 @@ import Footer from './customer/components/Footer/Footer';
 import Product from './customer/components/Product/Product';
 import ProductDetails from './customer/components/ProductDetails/ProductDetails';
 import ProductReviewCard from './customer/components/ProductDetails/ProductReviewCard';
+import Cart from './customer/components/Cart/CartItem'
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         {/* Instead we are rendering Product Page for development */}
         {/* <Product/> */}
         {/* Instead we are rendering Product Details Page for development */}
-        <ProductDetails/>
+        {/* <ProductDetails/> */}
+        {/* Instead we are rendering Cart Page for development */}
+        <Cart/>
       </div>
       
       <div>
