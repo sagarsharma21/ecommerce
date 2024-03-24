@@ -1,9 +1,13 @@
 import React from 'react'
 import  './ProductCard.css'
+import { useNavigate } from 'react-router-dom'
 
 const ProductCard = ({product}) => {
+  
+  const navigate = useNavigate();
+  
   return (
-    <div className='productCard w-[15rem] m-3 transition-all cursor-pointer ' >
+    <div onClick={()=>navigate(`/product/${'ega'}`)} className='productCard w-[15rem] m-3 transition-all cursor-pointer ' >
       {/* Demo Product Card }
       <div className='h-[20rem] '>
         <img className='h-full w-full object-cover object-left-top ' src='https://rukminim1.flixcart.com/image/612/612/kdlzte80/ethnic-set/p/f/q/l-3209-mint-02-neysa-original-imafuh85unfjczkd.jpeg?q=70' alt='' />
