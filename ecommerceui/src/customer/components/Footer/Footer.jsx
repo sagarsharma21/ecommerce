@@ -4,7 +4,7 @@ import { Grid, Typography, Button, Link } from '@mui/material'
 const Footer = () => {
   return (
     <div>
-      This is your footer
+      {/* This is your footer */}
       <Grid className='bg-black text-white text-center mt-10'
       container
       sx={{bgcolor:"black", color:"white", py:3}}

@@ -8,6 +8,8 @@ import ProductDetails from './customer/components/ProductDetails/ProductDetails'
 import ProductReviewCard from './customer/components/ProductDetails/ProductReviewCard';
 import Cart from './customer/components/Cart/CartItem'
 import Checkout from './customer/components/Checkout/Checkout'
+import Order from './customer/components/Order/Order';
+import OrderDetails from './customer/components/Order/OrderDetails';
 
 function App() {
   return (
@@ -23,7 +25,10 @@ function App() {
         {/* Instead we are rendering Cart Page for development */}
         {/* <Cart/> */}
         {/* Instead we are rendering CheckOut Page for development */}
-        <Checkout/>
+        {/* <Checkout/> */}
+        {/* Instead we are rendering Order Page for development */}
+        <OrderDetails/>
+
       </div>
       
       <div>
