@@ -3,12 +3,11 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -18,6 +17,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 
+
 @Entity
 public class User {
 	
@@ -25,20 +25,24 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+    @Column(name="first_name")
 	private String firstName;
 	
+    @Column(name = "last_name")
 	private String lastName;
 	
+    @Column(name="password")
 	private String password;
 	
+    @Column(name = "email")
 	private String email;
 	
 	private String role;
 	
 	private String mobile;
 	
-	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
-	private List<Address> address=new ArrayList<>();
+//	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
+//	private List<Address> address=new ArrayList<>();
 	
 	@Embedded
 	@ElementCollection
@@ -47,7 +51,7 @@ public class User {
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@JsonIgnore
-	private List<Rating> rating = new ArrayList<>();
+	private List<Rating> ratings = new ArrayList<>();
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@JsonIgnore
@@ -130,13 +134,13 @@ public class User {
 		this.mobile = mobile;
 	}
 
-	public List<Address> getAddress() {
-		return address;
-	}
-
-	public void setAddress(List<Address> address) {
-		this.address = address;
-	}
+//	public List<Address> getAddress() {
+//		return address;
+//	}
+//
+//	public void setAddress(List<Address> address) {
+//		this.address = address;
+//	}
 
 	public List<PaymentInformation> getPaymentInformation() {
 		return paymentInformation;
@@ -147,11 +151,11 @@ public class User {
 	}
 
 	public List<Rating> getRating() {
-		return rating;
+		return ratings;
 	}
 
 	public void setRating(List<Rating> rating) {
-		this.rating = rating;
+		this.ratings = rating;
 	}
 
 	public List<Review> getReviews() {

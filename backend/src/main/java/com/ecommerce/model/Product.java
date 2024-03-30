@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale.Category;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -58,7 +57,7 @@ public class Product {
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true )
 	private List<Rating> ratings = new ArrayList<>();
 	
-	@OneToMany(mappedBy = "produt", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Review> reviews = new ArrayList<>();
 	
 	@Column(name = "num_ratings")
@@ -66,7 +65,7 @@ public class Product {
 	
 	@ManyToOne
 	@JoinColumn(name = "category_id")
-	private Category category;
+	private com.ecommerce.model.Category category;
 	
 	private LocalDateTime createdAt;
 	
@@ -79,7 +78,7 @@ public class Product {
 	//All Args Constructor
 	public Product(Long id, String title, String description, int price, int discountedPrice, int discountPercent,
 			int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings,
-			List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
+			List<Review> reviews, int numRatings, com.ecommerce.model.Category category, LocalDateTime createdAt) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -211,11 +210,11 @@ public class Product {
 		this.numRatings = numRatings;
 	}
 
-	public Category getCategory() {
+	public com.ecommerce.model.Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(Category category) {
+	public void setCategory(com.ecommerce.model.Category category) {
 		this.category = category;
 	}
 

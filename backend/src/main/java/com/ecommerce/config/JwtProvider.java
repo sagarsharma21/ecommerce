@@ -9,17 +9,26 @@ import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class JwtProvider {
-	SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
 	
+	private SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
+	
+//	public JwtProvider(SecretKey key) {//Addition here to fix jwt error
+//		super();
+//		this.key = key;
+//	}
+
 	public String generateToken(Authentication auth) {
 	String jwt = Jwts.builder()
 			.setIssuedAt(new Date())
 			.setExpiration(new Date(new Date().getTime()+846000000))
 			.claim("email", auth.getName())
-			.signWith(key).compact();
+			.signWith(key)
+			.compact();
 	
 	return jwt;
 	}

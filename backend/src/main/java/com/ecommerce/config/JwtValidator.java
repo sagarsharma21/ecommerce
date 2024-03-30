@@ -2,12 +2,11 @@ package com.ecommerce.config;
 
 import java.io.IOException;
 import java.util.List;
+
 import javax.crypto.SecretKey;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.rsocket.RSocketSecurity.JwtSpec;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -42,8 +41,7 @@ public class JwtValidator extends OncePerRequestFilter {
 				String authorities = String.valueOf(claims.get("authorities"));
 				
 				List<GrantedAuthority> auths=AuthorityUtils.commaSeparatedStringToAuthorityList(authorities);
-				Authentication authentication = new UsernamePasswordAuthenticationToken(email,null,auths );
-				
+				org.springframework.security.core.Authentication authentication = new UsernamePasswordAuthenticationToken(email,null,auths );
 				
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 						
@@ -51,9 +49,7 @@ public class JwtValidator extends OncePerRequestFilter {
 				// TODO: handle exception
 				throw new BadCredentialsException("invalid token..from jwt validator");
 			}
-		}
-		filterChain.doFilter(request, response);
 	}
-	
-	return null;
-}
+		filterChain.doFilter(request, response);
+//	return null;
+}}
