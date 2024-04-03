@@ -1,5 +1,5 @@
 import { act } from "react-dom/test-utils"
-import { FIND_PRODUCTS_FAILURE, FIND_PRODUCTS_REQUEST, FIND_PRODUCTS_SUCCESS, FIND_PRODUCT_BY_ID_SUCCESS } from "./ActionType"
+import { FIND_PRODUCTS_FAILURE, FIND_PRODUCTS_REQUEST, FIND_PRODUCTS_SUCCESS, FIND_PRODUCT_BY_ID_SUCCESS, FIND_PRODUCT_BY_ID_FAILURE } from "./ActionType"
 
 const initialState={
     products:[],
