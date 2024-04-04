@@ -27,6 +27,7 @@ import Radio from '@mui/material/Radio';
                               import FormControl from '@mui/material/FormControl';
                               import FormLabel from '@mui/material/FormLabel';
                               import FilterListIcon from '@mui/icons-material/FilterList';
+import { useDispatch, useSelector } from 'react-redux'
                               
                               
 const sortOptions = [
@@ -89,7 +90,22 @@ export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const location = useLocation();
   const navigate = useNavigate();
+  const param = useParams();
+  const dispatch = useDispatch();
+  const { product } = useSelector(store=>store);
   
+  //access query params from url
+  const decodedQueryString = decodeURIComponent(location.search);
+  const searchParams= new URLSearchParams(decodedQueryString);
+
+  const colorValue = searchParams.get("color");
+  const sizeValue = searchParams.get("size");
+  const priceValue = searchParams.get("price");
+  const discountValue = searchParams.get("discount");
+  const sortValue = searchParams.get("sort");
+  const pageNumber =searchParams.get("page") || 1;
+  const stock = searchParams.get("stock");
+
   //write function to create search filter
     const handleFilter= (value, sectionId) => {
       const searchParams = new URLSearchParams(location.search)
@@ -122,6 +138,35 @@ export default function Product() {
       navigate({search:`?${query}`})
     }
 
+    useEffect( () => {
+      
+    const [minPrice, maxPrice] =price===null? [0,5000]:priceValue.split("-")
+    .map(Number);
+    const data = {
+      category:param.levelThree,
+      colors:colorValue || [],
+      size:sizeValue || [],
+      minPrice ,
+      maxPrice ,
+      minDiscount:discount || 0,
+      stock:stock || 0,
+      sort:sortValue || "price_low",
+      pageNumber: pageNumber - 1,
+      pageSize: 10,
+      stock:stock
+    }
+      dispatch(findProducts(data))
+      
+    }, [param.levelThree,
+      colorValue,
+      sizeValue,
+      priceValue,
+      discountValue,
+      sortValue,
+      pageNumber,
+      stock
+      ]);
+    
   return (
     <div className="bg-white">
       <div>
@@ -362,7 +407,9 @@ export default function Product() {
               <div className="lg:col-span-4 w-full">{/* Your content */}
                  
                  <div className='flex flex-wrap justify-center bg-white py-5'>
-                  {mens_kurta.map((item) => <ProductCard product={item} />)}
+                  {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
+                  {/* //use Selector */}
+                  {product.product && product.product?.content?.map((item) => <ProductCard product={item} />)} 
                  </div>
 
               </div>

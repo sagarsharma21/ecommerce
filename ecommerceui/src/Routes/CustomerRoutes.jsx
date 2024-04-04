@@ -7,12 +7,16 @@ import Product from '../customer/components/Product/Product'
 import ProductDetails from '../customer/components/ProductDetails/ProductDetails'
 import Checkout from '../customer/components/Checkout/Checkout'
 import OrderDetails from '../customer/components/Order/OrderDetails'
+import { Home } from '@mui/icons-material'
 
 const CustomerRoutes = () => {
   return (
     <div>CustomerRoutes
         <div>
             <Routes>
+              <Route path='/login' element={<HomePage/>}></Route>
+              <Route path='/register' element={<HomePage/>}></Route>
+              
                 <Route path='/' element={<HomePage/>}></Route>
                 <Route path='/cart' element={<Cart/>}></Route>
                 <Route path='/:levelOne/:levelTwo/:levelThree' element={<Product/>}></Route>
