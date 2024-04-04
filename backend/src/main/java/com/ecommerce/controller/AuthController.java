@@ -31,14 +31,14 @@ public class AuthController {
 	private CustomUserServiceImplementation cusi;
 	
 	public AuthController(UserRepository userRepository, 
-			JwtProvider jwtProvider,
 			CustomUserServiceImplementation cusi, 
-			PasswordEncoder passwordEncoder) {
+			PasswordEncoder passwordEncoder,
+			JwtProvider jwtProvider) {
 		// TODO Auto-generated constructor stub
 		this.userRepository=userRepository;
-		this.jwtProvider=jwtProvider;
 		this.cusi=cusi;
 		this.passwordEncoder=passwordEncoder;
+		this.jwtProvider=jwtProvider;
 	}
 	
 	@PostMapping("/signup")
