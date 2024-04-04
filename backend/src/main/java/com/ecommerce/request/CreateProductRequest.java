@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.ecommerce.model.Size;
 
-public class CreateProdcutRequest {
+public class CreateProductRequest {
 
 	private String title;
 	

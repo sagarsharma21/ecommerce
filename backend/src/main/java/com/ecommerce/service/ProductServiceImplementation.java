@@ -17,7 +17,7 @@ import com.ecommerce.model.Product;
 import com.ecommerce.model.Size;
 import com.ecommerce.repository.CategoryRepository;
 import com.ecommerce.repository.ProductRepository;
-import com.ecommerce.request.CreateProdcutRequest;
+import com.ecommerce.request.CreateProductRequest;
 
 @Service
 public class ProductServiceImplementation implements ProductService{
@@ -27,16 +27,19 @@ public class ProductServiceImplementation implements ProductService{
 	private UserService userService;
 	private CategoryRepository categoryRepository;
 	
-	public ProductServiceImplementation(ProductRepository productRepository,
+	//Constructor
+	public ProductServiceImplementation(
+			ProductRepository productRepository,
 			UserService userService,
 			CategoryRepository categoryRepository) {
+		
 		this.productRepository=productRepository;
 		this.userService=userService;
 		this.categoryRepository=categoryRepository;
 	}
 	
 	@Override
-	public Product createProduct(CreateProdcutRequest req) {
+	public Product createProduct(CreateProductRequest req) {
 		// TODO Auto-generated method stub
 		//Top level category
 		Category topLevel=categoryRepository.findByName(req.getTopLevelcategory());
@@ -80,10 +83,10 @@ public class ProductServiceImplementation implements ProductService{
 		product.setDiscountedPrice(req.getDiscountedPrice());
 		product.setDiscountPercent(req.getDiscountPercent());
 		product.setImageUrl(req.getImageUrl());
-		//brand
-		//price
-		//size
-		//quantity
+		product.setBrand(req.getBrand());//brand
+		product.setPrice(req.getPrice());//price
+		product.setSizes(req.getSize());//size
+		product.setQuantity(req.getQuantity());//quantity
 		product.setCategory(thirdLevel);
 		product.setCreatedAt(LocalDateTime.now());
 		
@@ -134,7 +137,7 @@ public class ProductServiceImplementation implements ProductService{
 	}
 
 	@Override
-	public Page<Product> getAllProdcut(String category, List<String> color, List<Size> sizes, Integer minPrice,
+	public Page<Product> getAllProduct(String category, List<String> color, List<Size> sizes, Integer minPrice,
 			Integer maxPrice, Integer minDiscount, String sort, String stock, Integer pageNumber, Integer pageSize) {
 		// TODO Auto-generated method stub
 		Pageable pageable = PageRequest.of(pageNumber, pageSize);
