@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Box, Modal, Typography } from "@mui/material";
+import RegisterForm from "./RegisterForm";
+import { useLocation } from "react-router-dom";
 
   const style = {
     position: 'absolute', //as 'absolute',
@@ -8,7 +10,6 @@ import { Button, Box, Modal, Typography } from "@mui/material";
     transform: 'translate(-50%, -50%)',
     width: 500,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
     outline: 'none',
     boxShadow: 24,
     p: 4,
@@ -16,23 +17,22 @@ import { Button, Box, Modal, Typography } from "@mui/material";
 
 
 const AuthModal = ({handleClose, handleOpen}) => {
+  const location=useLocation();
   return (
     <div>
       AuthModal
       <Button onClick={handleOpen}>Open modal</Button>
       <Modal
-        open={true}
+        open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            This is a React Modal from Mui Material
-          </Typography>
+          {location.pathname==="/login"?<LoginForm/> :}
+          <RegisterForm/>
+          
+          <RegisterForm/>
         </Box>
       </Modal>
     </div>
