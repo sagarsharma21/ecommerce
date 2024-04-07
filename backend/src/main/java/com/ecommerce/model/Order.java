@@ -77,11 +77,11 @@ public class Order {
 		this.orderDate = orderDate;
 		this.deliveryDate = deliveryDate;
 		this.shippingAddress = shippingAddress;
-		this.paymentDetails = paymentDetails;
+		//this.paymentDetails = paymentDetails;
 		this.totalPrice = totalPrice;
 		this.totalDiscountedPrice = totalDiscountedPrice;
 		this.discounte = discounte;
-		this.orderStatus = orderStatus;
+		//this.orderStatus = orderStatus;
 		this.totalItem = totalItem;
 		this.createdAt = createdAt;
 	}
