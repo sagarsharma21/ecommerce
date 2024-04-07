@@ -6,11 +6,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ecommerce.user.domain.OrderStatus;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -44,8 +41,8 @@ public class Order {
     @OneToOne
     private Address shippingAddress;
 
-    @Embedded
-    private PaymentDetails paymentDetails=new PaymentDetails();
+    //@Embedded
+    //private PaymentDetails paymentDetails=new PaymentDetails();
 
     private double totalPrice;
     
@@ -53,7 +50,7 @@ public class Order {
     
     private Integer discounte;
 
-    private OrderStatus orderStatus;
+    //private OrderStatus orderStatus;
     
     private int totalItem;
     
@@ -66,8 +63,12 @@ public class Order {
     
 
 	public Order(Long id, String orderId, User user, List<OrderItem> orderItems, LocalDateTime orderDate,
-			LocalDateTime deliveryDate, Address shippingAddress, PaymentDetails paymentDetails, double totalPrice,
-			Integer totalDiscountedPrice, Integer discounte, com.ecommerce.model.OrderStatus orderStatus, int totalItem,
+			LocalDateTime deliveryDate, Address shippingAddress, 
+			//PaymentDetails paymentDetails,
+			double totalPrice,
+			Integer totalDiscountedPrice, Integer discounte, 
+			//com.ecommerce.model.OrderStatus orderStatus, 
+			int totalItem,
 			LocalDateTime createdAt) {
 		super();
 		this.id = id;
@@ -77,11 +78,11 @@ public class Order {
 		this.orderDate = orderDate;
 		this.deliveryDate = deliveryDate;
 		this.shippingAddress = shippingAddress;
-		this.paymentDetails = paymentDetails;
+		//this.paymentDetails = paymentDetails;
 		this.totalPrice = totalPrice;
 		this.totalDiscountedPrice = totalDiscountedPrice;
 		this.discounte = discounte;
-		this.orderStatus = orderStatus;
+		//this.orderStatus = orderStatus;
 		this.totalItem = totalItem;
 		this.createdAt = createdAt;
 	}
@@ -168,13 +169,13 @@ public class Order {
 		this.shippingAddress = shippingAddress;
 	}
 
-	public PaymentDetails getPaymentDetails() {
-		return paymentDetails;
-	}
+//	public PaymentDetails getPaymentDetails() {
+//		return paymentDetails;
+//	}
 
-	public void setPaymentDetails(PaymentDetails paymentDetails) {
-		this.paymentDetails = paymentDetails;
-	}
+//	public void setPaymentDetails(PaymentDetails paymentDetails) {
+//		this.paymentDetails = paymentDetails;
+//	}
 
 	public double getTotalPrice() {
 		return totalPrice;
@@ -184,13 +185,13 @@ public class Order {
 		this.totalPrice = totalPrice;
 	}
 
-	public OrderStatus getOrderStatus() {
-		return orderStatus;
-	}
+//	public OrderStatus getOrderStatus() {
+//		return orderStatus;
+//	}
 
-	public void setOrderStatus(OrderStatus orderStatus) {
-		this.orderStatus = orderStatus;
-	}
+//	public void setOrderStatus(OrderStatus orderStatus) {
+//		this.orderStatus = orderStatus;
+//	}
 
 	public String getOrderId() {
 		return orderId;
