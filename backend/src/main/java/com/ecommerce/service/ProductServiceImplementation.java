@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Category;
 import com.ecommerce.model.Product;
-import com.ecommerce.model.Size;
 import com.ecommerce.repository.CategoryRepository;
 import com.ecommerce.repository.ProductRepository;
 import com.ecommerce.request.CreateProductRequest;
@@ -137,7 +136,7 @@ public class ProductServiceImplementation implements ProductService{
 	}
 
 	@Override
-	public Page<Product> getAllProduct(String category, List<String> color, List<Size> sizes, Integer minPrice,
+	public Page<Product> getAllProduct(String category, List<String> color, List<String> size, Integer minPrice,
 			Integer maxPrice, Integer minDiscount, String sort, String stock, Integer pageNumber, Integer pageSize) {
 		// TODO Auto-generated method stub
 		Pageable pageable = PageRequest.of(pageNumber, pageSize);
@@ -172,7 +171,10 @@ public class ProductServiceImplementation implements ProductService{
 }
 
 
-
+//public Page<Product> getAllProduct(String category, List<String>color, List<String> sizes, 
+//		Integer minPrice, Integer maxPrice, Integer minDiscount, 
+//		String sort, String stock, Integer pageNumber, Integer pageSize);
+//
 
 
 
