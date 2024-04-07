@@ -17,7 +17,7 @@ public class CustomUserServiceImplementation implements UserDetailsService{
 
 	private UserRepository userRepository;
 	
-	public CustomUserServiceImplementation() {
+	public CustomUserServiceImplementation(UserRepository userRepository) {
 		// TODO Auto-generated constructor stub
 		this.userRepository=userRepository;
 	}
