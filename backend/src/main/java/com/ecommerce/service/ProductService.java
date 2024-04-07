@@ -5,7 +5,6 @@ import org.springframework.data.domain.Page;
 
 import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Product;
-import com.ecommerce.model.Size;
 import com.ecommerce.request.CreateProductRequest;
 
 public interface ProductService {
@@ -20,7 +19,7 @@ public interface ProductService {
 	
 	public List<Product> findProductByCategory(String category);
 	
-	public Page<Product> getAllProduct(String category, List<String>colors, List<Size> sizes, 
+	public Page<Product> getAllProduct(String category, List<String>colors, List<String> sizes, 
 			Integer minPrice, Integer maxPrice, Integer minDiscount, 
 			String sort, String stock, Integer pageNumber, Integer pageSize);
 
