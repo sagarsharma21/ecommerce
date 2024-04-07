@@ -8,6 +8,6 @@ import com.ecommerce.model.Cart;
 
 public interface CartRepository extends JpaRepository<Cart, Long> {
 	
-	@Query("SELCET c From Cart c WHERE c.user.id=:userId")
+	@Query("SELECT c From Cart c WHERE c.user.id=:userId")
 	public Cart findByUserId(@Param("userId")Long userId);
 }
