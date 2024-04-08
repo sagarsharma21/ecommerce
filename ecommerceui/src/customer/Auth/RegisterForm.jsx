@@ -3,20 +3,17 @@ import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
-    const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const data=new FormData(event.currentTarget);
-    const userData={
-        firstName:data.get("firstName"),
-        lastName:data.get("lastName"),
-        email:data.get("email"),
-        password:data.get("password"),
-
-
-    }
-   console.log("userData", userData)
-
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const userData = {
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
+      email: data.get("email"),
+      password: data.get("password"),
+    };
+    console.log("userData", userData);
   };
   return (
     <div>
@@ -42,7 +39,7 @@ const RegisterForm = () => {
               autoComplete="given-name"
             />
           </Grid>
-          <Grid item xs={12} >
+          <Grid item xs={12}>
             <TextField
               required
               id="email"
@@ -52,7 +49,7 @@ const RegisterForm = () => {
               autoComplete="email"
             />
           </Grid>
-          <Grid item xs={12} >
+          <Grid item xs={12}>
             <TextField
               required
               id="password"
@@ -62,24 +59,30 @@ const RegisterForm = () => {
               autoComplete="password"
             />
           </Grid>
-          <Grid item xs={12} >
-            <Button className='bg-[#9155FD] w-full'
-            type="submit"
-            variant="contained"
-            size="large"
-            sx={{ padding:".8rem 0", bgcolor: "#9155FD"}}
-
+          <Grid item xs={12}>
+            <Button
+              className="bg-[#9155FD] w-full"
+              type="submit"
+              variant="contained"
+              size="large"
+              sx={{ padding: ".8rem 0", bgcolor: "#9155FD" }}
             >
-                Register
+              Register
             </Button>
           </Grid>
         </Grid>
       </form>
       <div className="flex justify-center flex-col items-center">
-    <div className='py-3 flex items-center'>
-        <p> Already registered? </p>
-        <button onClick={()=> Navigate("/login")}className='m1-5' size='small '>Login</button>
-    </div>
+        <div className="py-3 flex items-center">
+          <p> Already registered? </p>
+          <button
+            onClick={() => navigate("/login")}
+            className="m1-5"
+            size="small "
+          >
+            Login
+          </button>
+        </div>
       </div>
     </div>
   );

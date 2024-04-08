@@ -7,7 +7,7 @@ const initialState={
     loading:false,
     error:null
 }
-export const customerProductReducer= ()=> {
+export const customerProductReducer = (state=initialState,action)=> {
 
     switch(action.type){
         case FIND_PRODUCTS_REQUEST:

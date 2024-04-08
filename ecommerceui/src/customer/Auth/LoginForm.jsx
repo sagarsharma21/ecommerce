@@ -55,7 +55,7 @@ const LoginForm = () => {
       <div className="flex justify-center flex-col items-center">
     <div className='py-3 flex items-center'>
         <p> Don't have an account? </p>
-        <button onClick={()=> Navigate("/register")}className='m1-5' size='small '>Register</button>
+        <button onClick={()=> navigate("/register")}className='m1-5' size='small '>Register</button>
     </div>
       </div>
     </div>
