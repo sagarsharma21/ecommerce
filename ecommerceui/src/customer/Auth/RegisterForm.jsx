@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import { navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { getUser, register } from "../../State/Auth/Action";
 
 const RegisterForm = () => {
