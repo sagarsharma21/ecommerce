@@ -36,7 +36,7 @@ const RegisterForm = () => {
             <TextField
               required
               id="lastName"
-              name="lasttName"
+              name="lastName"
               label="Last Name"
               fullWidth
               autoComplete="given-name"
@@ -77,7 +77,7 @@ const RegisterForm = () => {
       </form>
       <div className="flex justify-center flex-col items-center">
     <div className='py-3 flex items-center'>
-        <p> if you have already account?</p>
+        <p> Already registered? </p>
         <button onClick={()=> Navigate("/login")}className='m1-5' size='small '>Login</button>
     </div>
       </div>
