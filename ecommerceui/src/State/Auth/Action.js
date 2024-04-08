@@ -1,6 +1,7 @@
 import axios from "axios"
-import { API_BASE_URL } from "../../config/apiConfig"
-import { LOGIN_REQUEST, LOGIN_FAILURE, GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS, LOGIN_SUCCESS, LOGOUT, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./ActionType";import { type } from "@testing-library/user-event/dist/type";
+import api, { API_BASE_URL } from "../../config/apiConfig"
+import { LOGIN_REQUEST, LOGIN_FAILURE, GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS, LOGIN_SUCCESS, LOGOUT, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./ActionType";
+import { type } from "@testing-library/user-event/dist/type";
 
 const token = localStorage.getItem("jwt");
 const registerRequest= () =>({type:REGISTER_REQUEST});
@@ -51,8 +52,8 @@ export const login = (userData) => async (dispatch)=>{
 
 //get user
 const getUserRequest= () =>({type:GET_USER_REQUEST});
-const getUserSuccess= () =>({type:GET_USER_SUCCESS, payload:user});
-const getUserFailure= () =>({type:GET_USER_FAILURE, payload:error});
+const getUserSuccess= (user) =>({type:GET_USER_SUCCESS, payload:user});
+const getUserFailure= (error) =>({type:GET_USER_FAILURE, payload:error});
 
 export const getUser = (jwt) => async (dispatch)=>{
 

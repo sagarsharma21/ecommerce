@@ -12,23 +12,24 @@
   }
   ```
 */
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { mens_kurta } from '../../../Data/Men/mens_kurta'
 import ProductCard from './ProductCard'
 import { filters, singleFilter } from './FilterData'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Radio from '@mui/material/Radio';
-                              import RadioGroup from '@mui/material/RadioGroup';
-                              import FormControlLabel from '@mui/material/FormControlLabel';
-                              import FormControl from '@mui/material/FormControl';
-                              import FormLabel from '@mui/material/FormLabel';
-                              import FilterListIcon from '@mui/icons-material/FilterList';
-import { useDispatch, useSelector } from 'react-redux'
-                              
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import FilterListIcon from '@mui/icons-material/FilterList';
+
+import { findProducts } from '../../../State/Product/Action';
                               
 const sortOptions = [
   // { name: 'Most Popular', href: '#', current: true },
@@ -140,7 +141,7 @@ export default function Product() {
 
     useEffect( () => {
       
-    const [minPrice, maxPrice] =price===null? [0,5000]:priceValue.split("-")
+    const [minPrice, maxPrice] = (priceValue) === null? [0,5000]:priceValue.split("-")
     .map(Number);
     const data = {
       category:param.levelThree,
@@ -148,7 +149,7 @@ export default function Product() {
       size:sizeValue || [],
       minPrice ,
       maxPrice ,
-      minDiscount:discount || 0,
+      minDiscount:discountValue || 0,
       stock:stock || 0,
       sort:sortValue || "price_low",
       pageNumber: pageNumber - 1,
