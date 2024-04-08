@@ -1,7 +1,6 @@
 import axios from "axios"
 import { API_BASE_URL } from "../../config/apiConfig"
-import { GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS, LOGIN_SUCCESS, LOGOUT, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./ActionType"
-import { type } from "@testing-library/user-event/dist/type";
+import { LOGIN_REQUEST, LOGIN_FAILURE, GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS, LOGIN_SUCCESS, LOGOUT, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./ActionType";import { type } from "@testing-library/user-event/dist/type";
 
 const token = localStorage.getItem("jwt");
 const registerRequest= () =>({type:REGISTER_REQUEST});
