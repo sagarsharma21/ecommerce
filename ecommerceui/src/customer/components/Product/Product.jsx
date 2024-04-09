@@ -29,7 +29,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import FilterListIcon from '@mui/icons-material/FilterList';
 
-import { findProducts } from '../../../State/Product/Action';
+import { findProducts, } from '../../../State/Product/Action';
                               
 const sortOptions = [
   // { name: 'Most Popular', href: '#', current: true },
@@ -154,7 +154,6 @@ export default function Product() {
       sort:sortValue || "price_low",
       pageNumber: pageNumber - 1,
       pageSize: 10,
-      stock:stock
     }
       dispatch(findProducts(data))
       
