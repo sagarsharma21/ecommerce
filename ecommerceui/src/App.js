@@ -20,18 +20,18 @@ function App() {
     {/* Hello ecomm */}
     <Navigation/>
 
-      <Routes>
+      {/* <Routes>
         <Route path='/*' element={<CustomerRoutes/>} >
 
         </Route>
       </Routes>
-      
+       */}
       <div>
         <Footer/>
       </div>
       
       <div>
-        {/* <HomePage/> */}
+        <HomePage/> 
         {/* Instead we are rendering Product Page for development */}
         {/* <Product/> */}
         {/* Instead we are rendering Product Details Page for development */}
@@ -41,7 +41,7 @@ function App() {
         {/* Instead we are rendering CheckOut Page for development */}
         {/* <Checkout/> */}
         {/* Instead we are rendering Order Page for development */}
-        {/* <OrderDetails/> */}
+        {/* <OrderDetails/>*/}
 
       </div>
       
