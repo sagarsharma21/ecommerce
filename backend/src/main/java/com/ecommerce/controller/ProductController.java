@@ -56,13 +56,13 @@ public class ProductController {
 	}
 	
 	
-//	@GetMapping("/products/search")
-//	public ResponseEntity<List<Product>> searchProductHandler(@RequestParam String q){
-//		
-//		List<Product> products=productService.searchProduct(q);
-//		
-//		return new ResponseEntity<List<Product>>(products, HttpStatus.OK));
-//	}
+	@GetMapping("/products/search")
+	public ResponseEntity<List<Product>> searchProductHandler(@RequestParam String q){
+		
+		List<Product> products=productService.searchProduct(q);
+		
+		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+	}
 }
 
 
