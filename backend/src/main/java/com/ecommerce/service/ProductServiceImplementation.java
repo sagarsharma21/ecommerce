@@ -167,6 +167,13 @@ public class ProductServiceImplementation implements ProductService{
 			return filteredProducts;
 	}
 
+	@Override
+	public List<Product> searchProduct(String query) {
+		// TODO Auto-generated method stub
+		List<Product> products=productRepository.searchProduct(query);
+		return null;
+	}
+
 	
 }
 

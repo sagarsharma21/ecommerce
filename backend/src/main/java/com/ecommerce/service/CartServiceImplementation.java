@@ -1,5 +1,7 @@
 package com.ecommerce.service;
 
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Cart;
 import com.ecommerce.model.CartItem;
@@ -8,6 +10,7 @@ import com.ecommerce.model.User;
 import com.ecommerce.repository.CartRepository;
 import com.ecommerce.request.AddItemRequest;
 
+@Service
 public class CartServiceImplementation implements CartService{
 
 	private CartRepository cartRepository;
@@ -30,7 +33,7 @@ public class CartServiceImplementation implements CartService{
 	}
 
 	@Override
-	public String addCartItem(Long userId, AddItemRequest req) throws ProductException {
+	public CartItem addCartItem(Long userId, AddItemRequest req) throws ProductException {
 		// TODO Auto-generated method stub
 		Cart cart=cartRepository.findByUserId(userId);
 		Product product = productService.findProductById(req.getProductId());
@@ -50,9 +53,10 @@ public class CartServiceImplementation implements CartService{
 			
 			CartItem createdCartItem=cartItemService.createCartItem(cartItem);
 			cart.getCartItems().add(createdCartItem);
+			return createdCartItem;
 		}
 		
-		return "Item added to Cart!";
+		return isPresent;//"Item added to Cart!";
 	}
 
 	@Override

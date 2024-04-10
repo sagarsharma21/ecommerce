@@ -409,7 +409,7 @@ export default function Product() {
                  <div className='flex flex-wrap justify-center bg-white py-5'>
                   {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
                   {/* //use Selector */}
-                  {product.product && product.product?.content?.map((item) => <ProductCard product={item} />)} 
+                  {product.product && mens_kurta.map((item) => <ProductCard product={item} />)} 
                  </div>
 
               </div>
