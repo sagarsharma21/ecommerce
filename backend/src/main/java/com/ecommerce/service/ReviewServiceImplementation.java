@@ -3,6 +3,8 @@ package com.ecommerce.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Product;
 import com.ecommerce.model.Review;
@@ -11,6 +13,7 @@ import com.ecommerce.repository.ProductRepository;
 import com.ecommerce.repository.ReviewRepository;
 import com.ecommerce.request.ReviewRequest;
 
+@Service
 public class ReviewServiceImplementation implements ReviewService {
 
 	private ReviewRepository reviewRepository;

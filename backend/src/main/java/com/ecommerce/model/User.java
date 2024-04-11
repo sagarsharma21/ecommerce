@@ -41,8 +41,8 @@ public class User {
 	
 	private String mobile;
 	
-//	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
-//	private List<Address> address=new ArrayList<>();
+	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
+	private List<Address> address=new ArrayList<>();
 	
 	@Embedded
 	@ElementCollection
@@ -66,6 +66,7 @@ public class User {
 	
 	//All Args Constructor
 	public User(Long id, String firstName, String lastName, String password, String email, String role, String mobile,
+			List<Address> address,
 			LocalDateTime createdAt) {
 		super();
 		this.id = id;
@@ -134,13 +135,13 @@ public class User {
 		this.mobile = mobile;
 	}
 
-//	public List<Address> getAddress() {
-//		return address;
-//	}
-//
-//	public void setAddress(List<Address> address) {
-//		this.address = address;
-//	}
+	public List<Address> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<Address> address) {
+		this.address = address;
+	}
 
 	public List<PaymentInformation> getPaymentInformation() {
 		return paymentInformation;

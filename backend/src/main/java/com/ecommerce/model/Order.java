@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ecommerce.user.domain.OrderStatus;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -48,9 +50,9 @@ public class Order {
     
     private Integer totalDiscountedPrice;
     
-    private Integer discounte;
+    private Integer discount;
 
-    //private OrderStatus orderStatus;
+    private OrderStatus orderStatus;
     
     private int totalItem;
     
@@ -66,7 +68,7 @@ public class Order {
 			LocalDateTime deliveryDate, Address shippingAddress, 
 			//PaymentDetails paymentDetails,
 			double totalPrice,
-			Integer totalDiscountedPrice, Integer discounte, 
+			Integer totalDiscountedPrice, Integer discount, 
 			//com.ecommerce.model.OrderStatus orderStatus, 
 			int totalItem,
 			LocalDateTime createdAt) {
@@ -81,8 +83,8 @@ public class Order {
 		//this.paymentDetails = paymentDetails;
 		this.totalPrice = totalPrice;
 		this.totalDiscountedPrice = totalDiscountedPrice;
-		this.discounte = discounte;
-		//this.orderStatus = orderStatus;
+		this.discount = discount;
+		this.orderStatus = orderStatus;
 		this.totalItem = totalItem;
 		this.createdAt = createdAt;
 	}
@@ -106,11 +108,11 @@ public class Order {
 	}
 
 	public Integer getDiscounte() {
-		return discounte;
+		return discount;
 	}
 
-	public void setDiscounte(Integer discounte) {
-		this.discounte = discounte;
+	public void setDiscount(Integer discount) {
+		this.discount = discount;
 	}
 
 	public Integer getTotalDiscountedPrice() {
@@ -185,13 +187,13 @@ public class Order {
 		this.totalPrice = totalPrice;
 	}
 
-//	public OrderStatus getOrderStatus() {
-//		return orderStatus;
-//	}
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
+	}
 
-//	public void setOrderStatus(OrderStatus orderStatus) {
-//		this.orderStatus = orderStatus;
-//	}
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
+	}
 
 	public String getOrderId() {
 		return orderId;
