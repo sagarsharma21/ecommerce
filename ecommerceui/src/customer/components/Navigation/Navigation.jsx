@@ -291,14 +291,16 @@ export default function Navigation() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                {/* <Link to="/"> */}
+                <Link to="/">
                   <span className="sr-only">Your Company</span>
                   <img
+                    //href="/"
+                    cursor="pointer"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt="TailWindLogo"
                     className="h-8 w-8 mr-2"
                   />
-                {/* </Link> */}
+                </Link>
               </div>
 
               {/* Flyout menus */}
