@@ -14,6 +14,7 @@ import OrderDetails from './customer/components/Order/OrderDetails';
 import CustomerRoutes from './Routes/CustomerRoutes';
 
 function App() {
+  
   return (
     <div className="App">
 

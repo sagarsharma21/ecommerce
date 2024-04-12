@@ -99,9 +99,9 @@ export default function Navigation() {
     handleCloseUserMenu();
     dispatch(logout());
   };
-  const handleMyOrderClick=()=>{
+  const handleMyOrderClick = () => {
     handleCloseUserMenu()
-    auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order")
+    auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order");
     
   }
 
@@ -511,7 +511,7 @@ export default function Navigation() {
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <Button
-                    // onClick={() => navigate("/cart")}
+                     onClick={() => navigate("/cart")}
                     className="group -m-2 flex items-center p-2"
                   >
                     <ShoppingBagIcon
@@ -519,8 +519,7 @@ export default function Navigation() {
                       aria-hidden="true"
                     />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                      {/* {cart.cart?.totalItem} */}
-                      2
+                      {cart.cart?.totalItem}
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Button>
