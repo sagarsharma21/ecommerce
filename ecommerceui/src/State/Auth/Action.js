@@ -79,4 +79,5 @@ export const getUser = (jwt) => async (dispatch)=>{
 export const logout = () =>(dispatch)=>{
 
     dispatch({type:LOGOUT, payload:null})
+    localStorage.clear();
 }

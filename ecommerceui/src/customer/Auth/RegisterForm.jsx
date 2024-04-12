@@ -8,8 +8,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { getUser, register } from "../../State/Auth/Action";
 
 const RegisterForm = () => {
+ 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+ 
   const jwt = localStorage.getItem("jwt");
   const { auth } = useSelector((store) => store);
 
@@ -17,11 +19,12 @@ const RegisterForm = () => {
     if (jwt) {
       dispatch(getUser(jwt));
     }
-  }, [jwt,auth.jwt]);
-  
+  }, [jwt, auth.jwt]);
 
   const handleSubmit = (event) => {
+    
     event.preventDefault();
+    
     const data = new FormData(event.currentTarget);
     const userData = {
       firstName: data.get("firstName"),
@@ -93,13 +96,13 @@ const RegisterForm = () => {
       <div className="flex justify-center flex-col items-center">
         <div className="py-3 flex items-center">
           <p> Already registered? </p>
-          <button
+          <Button
             onClick={() => navigate("/login")}
             className="m1-5"
-            size="small "
+            size="small"
           >
             Login
-          </button>
+          </Button>
         </div>
       </div>
     </div>

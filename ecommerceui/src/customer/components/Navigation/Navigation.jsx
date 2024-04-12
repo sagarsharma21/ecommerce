@@ -30,18 +30,17 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { navigation as  NavigationData  } from './NavigationData';
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 
-// import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 // import { navigation } from "../../../config/navigationMenu";
- import AuthModal from "../../Auth/AuthModal";
-// import { useDispatch, useSelector } from "react-redux";
+import AuthModal from "../../Auth/AuthModal";
+import { useDispatch, useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
-// import { getUser, logout } from "../../../Redux/Auth/Action";
-// import { getCart } from "../../../Redux/Customers/Cart/Action";
+import { getUser, logout } from "../../../State/Auth/Action";
+import { getCart } from "../../../State/Cart/Action";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -50,20 +49,14 @@ function classNames(...classes) {
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const { auth,cart } = useSelector((store) => store);
+  const dispatch = useDispatch();
+  const { auth,cart } = useSelector((store) => store);
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
-  // const location=useLocation();
+  const location=useLocation();
 
-  // useEffect(() => {
-  //   if (jwt) {
-  //     dispatch(getUser(jwt));
-  //     dispatch(getCart(jwt));
-  //   }
-  // }, [jwt]);
   
   const handleUserClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -77,7 +70,7 @@ export default function Navigation() {
   };
   const handleClose = () => {
     setOpenAuthModal(false);
-   
+    //navigate("/");
   };
 
   const handleCategoryClick = (category, section, item, close) => {
@@ -85,24 +78,32 @@ export default function Navigation() {
     close();
   };
 
-  // useEffect(() => {
-  //   if (auth.user){ 
-  //     handleClose();
-  //   }
-  //   if(location.pathname==="/login" || location.pathname==="/register"){
-  //     navigate(-1)
-  //   }
-  // }, [auth.user]);
 
-  // const handleLogout = () => {
-  //   handleCloseUserMenu();
-  //   dispatch(logout());
-  // };
-  // const handleMyOrderClick=()=>{
-  //   handleCloseUserMenu()
-  //   auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order")
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getUser(jwt));
+      dispatch(getCart(jwt));
+    }
+  }, [jwt, auth.jwt]);
+  
+  useEffect(() => {
+    if (auth.user){ 
+      handleClose();
+    }
+    if(location.pathname==="/login" || location.pathname==="/register"){
+      navigate(-1)
+    }
+  }, [auth.user]);  
+
+  const handleLogout = () => {
+    handleCloseUserMenu();
+    dispatch(logout());
+  };
+  const handleMyOrderClick=()=>{
+    handleCloseUserMenu()
+    auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order")
     
-  // }
+  }
 
   return (
     <div className="bg-white pb-10">
@@ -434,8 +435,8 @@ export default function Navigation() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {false //auth.user
-                   ? (
+                  {auth.user?.firstName ? (
+
                     <div>
                       <Avatar
                         className="text-white"
@@ -450,8 +451,8 @@ export default function Navigation() {
                           cursor: "pointer",
                         }}
                       >
-                        {/* {auth.user?.firstName[0].toUpperCase()} */}
-                        S
+                        {auth.user?.firstName[0].toUpperCase()}
+                        {/* S */}
                       </Avatar>
                       {/* <Button
                         id="basic-button"
@@ -472,12 +473,15 @@ export default function Navigation() {
                         }}
                       >
               
+                        <MenuItem onClick={handleCloseUserMenu}>
+                          Profile 
+                        </MenuItem>
                         
                         <MenuItem onClick={()=> navigate('/account/order')}//onClick={handleMyOrderClick}
                         >My Orders
                           {/* {auth.user?.role==="ROLE_ADMIN"?"Admin Dashboard":"My Orders"} */}
                         </MenuItem>
-                        <MenuItem //onClick={handleLogout}
+                        <MenuItem onClick={handleLogout}
                         >Logout</MenuItem>
                       </Menu>
                     </div>

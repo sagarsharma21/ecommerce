@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Box, Modal, Typography } from "@mui/material";
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const style = {
   position: "absolute", //as 'absolute',
@@ -18,9 +19,16 @@ const style = {
 
 const AuthModal = ({ handleClose, open }) => {
   const location = useLocation();
+  const { auth } = useSelector((store) => store);
+
+  useEffect(() => {
+    if(auth.user) 
+    handleClose();
+  }, [auth.user])
+
   return (
     <div>
-      AuthModal
+      {/* AuthModal */}
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <Modal
         open={open}
@@ -28,11 +36,10 @@ const AuthModal = ({ handleClose, open }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          {location.pathname === "/login" ? <LoginForm /> : <RegisterForm />}
-          {/* <RegisterForm/>
- <RegisterForm/> */}
+        <Box className="rounded-md" sx={style}>
+          {location.pathname === "/login" ? (<LoginForm />) : (<RegisterForm />)}         
         </Box>
+
       </Modal>
     </div>
   );

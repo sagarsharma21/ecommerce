@@ -1,7 +1,7 @@
 import { api } from "../../config/apiConfig"
-import { ADD_ITEM_TO_CART_FAILURE, ADD_ITEM_TO_CART_REQUEST, ADD_ITEM_TO_CART_SUCCESS, REMOVE_CART_ITEM_FAILURE,REMOVE_CART_ITEM_REQUEST ,REMOVE_CART_ITEM_SUCCESS, UPDATE_CART_ITEM_FAILURE, UPDATE_CART_ITEM_SUCCESS, UPDATE_CART_ITEM_REQUEST, GET_CART_FAILURE } from "./ActionType"
+import { GET_CART_REQUEST, GET_CART_SUCCESS, ADD_ITEM_TO_CART_FAILURE, ADD_ITEM_TO_CART_REQUEST, ADD_ITEM_TO_CART_SUCCESS, REMOVE_CART_ITEM_FAILURE,REMOVE_CART_ITEM_REQUEST ,REMOVE_CART_ITEM_SUCCESS, UPDATE_CART_ITEM_FAILURE, UPDATE_CART_ITEM_SUCCESS, UPDATE_CART_ITEM_REQUEST, GET_CART_FAILURE } from "./ActionType"
 
-export const get=()=> async (dispatch)=>{
+export const getCart=(jwt)=> async (dispatch)=>{
     dispatch({type:GET_CART_REQUEST})
 
     try {
@@ -38,7 +38,7 @@ export const removeCartItem=(reqData)=> async (dispatch)=>{
 }
 
 export const updateCartItem=(reqData)=> async (dispatch)=>{
-    dispatch({type:UPDATE_CART_ITEM_REQUEST, payload:data})
+    dispatch({type:UPDATE_CART_ITEM_REQUEST})
 
     try {
         const {data}=await api.put(`/api/cart_items/${reqData.cartItemId}`, reqData.data)
