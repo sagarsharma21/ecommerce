@@ -17,7 +17,7 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { mens_kurta } from '../../../Data/Men/mens_kurta'
-import ProductCard from './ProductCard'
+import  ProductCard  from './ProductCard';
 import { filters, singleFilter } from './FilterData'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -29,7 +29,8 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import FilterListIcon from '@mui/icons-material/FilterList';
 
-import { findProducts, } from '../../../State/Product/Action';
+import { findProducts, findProductsByCategory } from '../../../State/Product/Action';
+import { Backdrop, CircularProgress, Pagination } from '@mui/material'
                               
 const sortOptions = [
   // { name: 'Most Popular', href: '#', current: true },
@@ -93,8 +94,15 @@ export default function Product() {
   const navigate = useNavigate();
   const param = useParams();
   const dispatch = useDispatch();
-  const { product } = useSelector(store=>store);
-  
+
+  const jwt = localStorage.getItem("jwt");
+
+  const { customersProduct } = useSelector((store) => store);
+  const [isLoaderOpen, setIsLoaderOpen] = useState(false);
+
+  const handleLoaderClose = () => {
+    setIsLoaderOpen(false);
+  }
   //access query params from url
   const decodedQueryString = decodeURIComponent(location.search);
   const searchParams= new URLSearchParams(decodedQueryString);
@@ -107,6 +115,26 @@ export default function Product() {
   const pageNumber =searchParams.get("page") || 1;
   const stock = searchParams.get("stock");
 
+  console.log("location ", colorValue, sizeValue, priceValue, discountValue, sortValue, pageNumber, stock);
+  
+  const handleSortChange = (value) => {
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set("sort ", value);
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
+
+  const handlePaginationChange = (event, value) => {
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set("page", value);
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
+
+  // useEffect(() => {
+
+  // }, [])
+
   //write function to create search filter
     const handleFilter= (value, sectionId) => {
       const searchParams = new URLSearchParams(location.search)
@@ -118,8 +146,10 @@ export default function Product() {
           if(filterValue.length === 0){
             searchParams.delete(sectionId)
           }
+          console.log(" includes ");
       }
       else {
+        //remove all values for current section
         filterValue.push(value)
       }
 
@@ -128,8 +158,8 @@ export default function Product() {
         
       }
       const query = searchParams.toString();
-        navigate({search: `?${query}`})
-    }
+        navigate({search: `?${query}` })
+    };
 
     const handleRadioFilterChange=(e, sectionId) => {
       const searchParams = new URLSearchParams(location.search)
@@ -147,8 +177,8 @@ export default function Product() {
       category:param.levelThree,
       colors:colorValue || [],
       size:sizeValue || [],
-      minPrice ,
-      maxPrice ,
+      minPrice: minPrice,
+      maxPrice: maxPrice,
       minDiscount:discountValue || 0,
       stock:stock || 0,
       sort:sortValue || "price_low",
@@ -166,6 +196,15 @@ export default function Product() {
       pageNumber,
       stock
       ]);
+
+      useEffect(() => {
+        if(customersProduct.loading) {
+          setIsLoaderOpen(true);
+        }
+        else{
+          setIsLoaderOpen(false);
+        }
+      }, [customersProduct.loading]);
     
   return (
     <div className="bg-white">
@@ -243,7 +282,7 @@ export default function Product() {
                                 {section.options.map((option, optionIdx) => (
                                   <div key={option.value} className="flex items-center">
                                     <input
-                                    onChange={()=>handleFilter(option.value, section.id)}
+                                    onChange={() => handleFilter(option.value, section.id)}
                                       id={`filter-mobile-${section.id}-${optionIdx}`}
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
@@ -304,11 +343,12 @@ export default function Product() {
                         <Menu.Item key={option.name}>
                           {({ active }) => (
                             <a
+                            onClick={() => handleSortChange(option.query)}
                               href={option.href}
                               className={classNames(
                                 option.current ? 'font-medium text-gray-900' : 'text-gray-500',
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm'
+                                'block px-4 py-2 text-sm cursor-pointer'
                               )}
                             >
                               {option.name}
@@ -336,88 +376,213 @@ export default function Product() {
             </div>
           </div>
 
-          <section aria-labelledby="products-heading" className="pb-24 pt-6">
+        <section aria-labelledby="products-heading" className="pb-24 pt-6">
             <h2 id="products-heading" className="sr-only">
               Products
             </h2>
 
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
-              {/* Filters */}
-              {/* <h3 className='text-lg opacity-50 font-bold'>Filters</h3> */}
-              <form className="hidden lg:block">
-                <div className=' py-5 flex justify-between items-center'>
-                <h3 className='text-lg opacity-50 font-bold'>Filters</h3>
-                 <FilterListIcon/>
-                </div>
-                 
-              {/*  <h3 className="sr-only">Categories</h3>
-                <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
-                   {subCategories.map((category) => (
-                    <li key={category.name}>
-                      <a href={category.href}>{category.name}</a>
-                    </li>
-                  ))} 
-                </ul> /*}
-{/* Add singlefilter inst of filters.map */}
-                {singleFilter.map((section) => (
-                  <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
-                    {({ open }) => (
-                      <>
-                        <h3 className="-my-3 flow-root">
-                          <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                            {/* <span className="font-medium "></span> */}
-                            <FormLabel sx={{color:"black"}} className='text-black-900' id='demo-radio-buttons-group-label'>{section.name}</FormLabel>
-                            <span className="ml-6 flex items-center">
-                              {open ? (
-                                <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                              ) : (
-                                <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                              )}
-                            </span>
-                          </Disclosure.Button>
-                        </h3>
-                        <Disclosure.Panel className="pt-6">
-                          <div className="space-y-4">  
+            <div> 
+              <h2 className='py-5 font-semibold opacity-60 text-lg'>Filters</h2>          
+              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
+                {/* Filters */}
+                {/* <h3 className='text-lg opacity-50 font-bold'>Filters</h3> */}
+                <form className="hidden lg:block border rounded-md p-5">
+                  {filters.map((section) => (
+                    <Disclosure 
+                      as="div" 
+                      key={section.id} 
+                      className="border-b border-gray-200 py-6"
+                    >
+                        {({ open }) => (
+                          <>
+                            <h3 className="-my-3 flow-root">
+                              <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                                {/* <span className="font-medium "></span> */}
+                                <FormLabel sx={{color:"black"}} className='text-black-900' id='demo-radio-buttons-group-label'>{section.name}</FormLabel>
+                                <span className="ml-6 flex items-center">
+                                  {open ? (
+                                    <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                                  ) : (
+                                    <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                                  )}
+                                </span>
+                              </Disclosure.Button>
+                            </h3>
+                              <Disclosure.Panel className="pt-6">
+                                <div className="space-y-4">  
+                                  {section.options.map((option, optionIdx) => (
+                                    <div
+                                      key={option.value}
+                                      className='flex items-center'
+                                    >
+                                      <input
+                                        id={`filter-${section.id}-${optionIdx}`}
+                                        name={`${section.id}[]`}
+                                        defaultValue={option.value}
+                                        type="checkbox"
+                                        defaultChecked={option.checked}
+                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                        onChange={() =>
+                                          handleFilter(option.value, section.id)
+                                        }
+                                      />
+                                      <label
+                                        htmlFor={`filter-${section.id}-${optionIdx}`}
+                                        className='ml-3 text-sm text-gray-600'
+                                      >
+                                        {option.label}
+                                      </label>
+                                    </div>
+                                  ))}
+                                </div>
+                              </Disclosure.Panel>
+                          </>
+                      )}
+                      </Disclosure>
+                    ))}
+                      {singleFilter.map((section) => (
+                        <Disclosure
+                          as="div"
+                          key={section.id}
+                          className="border-b border-gray-200 py-6"
+                        >
+                          {({ open }) => (
+                            <>
+                              <h3 className='-my-3 flow-root'>
+                                <Disclosure.Button
+                                  className="flex w-full items-center justify-between bg-white py-3 
+                                  text-sm text-gray-400 hover:text-gray-500"
+                                >
+                                  <span className='font-medium text-gray-900'>
+                                    {section.name}
+                                  </span>
+                                  <span className='ml-6 flex items-center'>
+                                    {open ? (
+                                      <MinusIcon 
+                                        className='h-5 w-5'
+                                        aria-hidden="true"
+                                      />
+                                    ) : (
+                                      <PlusIcon
+                                        className='h-5 w-5'
+                                        aria-hidden="true"
+                                      />
+                                    )}
+                                  </span>
+                                </Disclosure.Button>
+                              </h3>
 
-                          {/* // Add radio Group here */} 
-                          <FormControl>   
-                          <RadioGroup
-                            aria-labelledby="demo-radio-buttons-group-label"
-                            defaultValue="female"
-                            name="radio-buttons-group"
-                          >
-                            {section.options.map((option, optionIdx) => (
-                                <>
-                                  <FormControlLabel onChange={(e)=>handleRadioFilterChange(e, section.id)} value={option.value} control={<Radio />} label={option.label} />
-                                  {/* <FormControlLabel value="male" control={<Radio />} label="Male" />
-                                  <FormControlLabel value="other" control={<Radio />} label="Other" /> */}
-                                </>
-                            ))}
-                          </RadioGroup>
-                          </FormControl>
-                          </div>
-                        </Disclosure.Panel>
-                    </>
-                    )}
-                  </Disclosure>
-                ))}
-              </form>
+                              <Disclosure.Panel className="pt-6">
+                                  {/* // Add radio Group here */} 
+                                  <FormControl>   
+                                    <RadioGroup
+                                      aria-labelledby="demo-radio-buttons-group-label"
+                                      defaultValue="female"
+                                      name="radio-buttons-group"
+                                    >
+                                      {section.options.map((option, optionIdx) => (
+                                          <>
+                                            <FormControlLabel 
+                                              onChange={(e) => handleRadioFilterChange(e, section.id)} 
+                                              value={option.value} 
+                                              control={<Radio />} 
+                                              label={option.label} 
+                                            />
+                                            {/* <FormControlLabel value="male" control={<Radio />} label="Male" />
+                                            <FormControlLabel value="other" control={<Radio />} label="Other" /> */}
+                                          </>
+                                      ))}
+                                    </RadioGroup>
+                                  </FormControl>
+                              </Disclosure.Panel>
+                            </>
+                          )}
+                        </Disclosure>
+                      ))}
+                </form>
 
-              {/* Product grid */}
-              <div className="lg:col-span-4 w-full">{/* Your content */}
-                 
-                 <div className='flex flex-wrap justify-center bg-white py-5'>
-                  {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
-                  {/* //use Selector */}
-                  {product.products && mens_kurta.map((item) => <ProductCard product={item} />)} 
-                 </div>
-
+                {/* Product grid */}
+                <div className="lg:col-span-4 w-full">{/* Your content */}
+                    <div className='flex flex-wrap justify-center bg-white py-5 rounded-md'>
+                      {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
+                      {/* //use Selector */}
+                      {customersProduct?.products?.content?.map((item) => (
+                        <ProductCard product={item} />
+                      ))}
+                      {/* {product.products && mens_kurta.map((item) => <ProductCard product={item} />)}  */}
+                    </div>
+                  </div>
+                </div> 
               </div>
-            
+            </section>
+          </main>
+
+            {/* Pagination section           */}
+            <section className='w-full px-[3.6rem] '>
+              <div className='mx-auto px-4 py-5 flex justify-center shadow-lg border rounded-md'>
+                <Pagination 
+                  count={customersProduct.products?.totalPages}
+                  color='primary'
+                  className=''
+                  onChange={handlePaginationChange}
+                />
+              </div>            
+            </section>    
+                      
+              {/* Backdrop */}
+              <section>
+                <Backdrop
+                  sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                  open={isLoaderOpen}
+                  onClick={handleLoaderClose}
+                >
+                  <CircularProgress color="inherit" />
+
+                </Backdrop>
+              </section>
             </div>
-          </section>
-        </main>
-      </div>
-    </div>
-  )
-}
+          </div>
+                
+
+              // </div>
+              //   <div className=' py-5 flex justify-between items-center'>
+              //   <h3 className='text-lg opacity-50 font-bold'>Filters</h3>
+              //    <FilterListIcon/>
+              //   </div>
+                 
+              
+              // <>
+              //   <h3 className="sr-only">Categories</h3>
+              //     <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+              //       {subCategories.map((category) => (
+              //         <li key={category.name}>
+              //           <a href={category.href}>{category.name}</a>
+              //         </li>
+              //       ))} 
+              //     </ul> 
+              //   </h3>
+              // </>
+              
+              // {/* //Add singlefilter inst of filters.map */
+            
+                  
+              // {singleFilter.map((section) => (
+                        
+
+              // {/* Product grid example */}
+              // {/*
+              // <div className="lg:col-span-4 w-full">{/* Your content */}
+              //    <div className='flex flex-wrap justify-center bg-white py-5 rounded-md'>
+              //     {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
+              //     {/* //use Selector */}
+              //     {/* {product.products && mens_kurta.map((item) => <ProductCard product={item} />)}  */}
+              //    </div> 
+              //   */}
+            
+    //         </div>
+    //       </section>
+    //     </main>
+    //   </div>
+    // </div>
+    
+  )};
