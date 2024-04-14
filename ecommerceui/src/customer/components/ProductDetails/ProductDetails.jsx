@@ -26,6 +26,7 @@ import { Rating, Button, Box, Grid, LinearProgress } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import {mens_kurta} from '../../../Data/Men/mens_kurta'
 import { gownsPage1 } from "../../../Data/Gowns/gowns";
+import { lehenga_page1 } from "../../../Data/Women/LehengaCholi";
 import HomeProductCard from '../../components/HomeSectionCard/HomeProductCard'
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -300,8 +301,8 @@ export default function ProductDetails() {
                     </div>
                   </RadioGroup>
                 </div>
-
-              <form className="mt-10" onSubmit={handleSubmit}></form>        
+                      
+                <div className="mt-10" onSubmit={handleSubmit}>        
                 {/* Sizes */}
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
@@ -381,7 +382,7 @@ export default function ProductDetails() {
                       ))}
                     </div>
                   </RadioGroup>
-                </div>
+                </div></div>
 
                 <Button
                 //onClick={handleAddToCart}

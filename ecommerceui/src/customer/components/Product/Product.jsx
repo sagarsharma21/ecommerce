@@ -293,7 +293,7 @@ export default function Product() {
                       {sortOptions.map((option) => (
                         <Menu.Item key={option.name}>
                           {({ active }) => (
-                            <a
+                            <p> <a
                             onClick={() => handleSortChange(option.query)}
                               href={option.href}
                               className={classNames(
@@ -303,7 +303,7 @@ export default function Product() {
                               )}
                             >
                               {option.name}
-                            </a>
+                            </a> </p>
                           )}
                         </Menu.Item>
                       ))}

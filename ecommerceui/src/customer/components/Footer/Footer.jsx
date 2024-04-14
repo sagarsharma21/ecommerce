@@ -110,19 +110,27 @@ const Footer = () => {
           <Typography className='pb-5' variant='h6'>Legal</Typography>
           <Typography className='pb-5' variant='h6'>About</Typography>
           <div>
-            <Button component='p' variant='body2' gutterBottom >Claim</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Claim
+            </Typography>
           </div>
 
           <div>
-            <Button component='p' variant='body2' gutterBottom >Privacy</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Privacy
+            </Typography>
           </div>
 
           <div>
-            <Button component='p' variant='body2' gutterBottom >Terms</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Terms
+            </Typography>
           </div>
 
           <div>
-            <Button component='p' variant='body2' gutterBottom >Report</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Report
+            </Typography>
           </div>
       
         </Grid>
