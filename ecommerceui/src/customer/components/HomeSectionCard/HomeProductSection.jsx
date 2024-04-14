@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import AliceCarousel from "react-alice-carousel";
-import HomeSectionCard from "./HomeSectionCard";
+import HomeSectionCard from "./HomeProductCard";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const HomeProductSection = ({ section, data }) => {
@@ -25,7 +25,7 @@ const HomeProductSection = ({ section, data }) => {
             items: 5.5,
             itemsFit: "contain",
           }
-    }
+    };
     const items = data?.slice(0, 10).map((item) => (
         <div className="">
             {" "}

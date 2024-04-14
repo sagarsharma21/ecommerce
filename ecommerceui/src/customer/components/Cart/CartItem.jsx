@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { removeCartItem, updateCartItem } from '../../../State/Cart/Action';
 
 const CartItem = ({ item, showButton }) => {
-    const dispatch = useDispatch;
+    const dispatch = useDispatch();
 
     const jwt = localStorage.getItem("jwt");
 

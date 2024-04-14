@@ -19,18 +19,25 @@
   }
   ```
 */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { Rating, Button, Box, Grid, LinearProgress } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import {mens_kurta} from '../../../Data/Men/mens_kurta'
-import HomeSectionCard from '../../components/HomeSectionCard/HomeSectionCard'
-import { useNavigate } from "react-router-dom";
+import { gownsPage1 } from "../../../Data/Gowns/gowns";
+import HomeProductCard from '../../components/HomeSectionCard/HomeProductCard'
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { productdata } from "../../../Data/data";
+
+import { findProductsById, findProducts } from "../../../State/Product/Action"; 
+import { addItemToCart } from "../../../State/Cart/Action";
+import { getAllReviews } from "../../../State/Review/Action"
 
 const product = {
   name: "Basic Tee 6-Pack",
-  price: "$192",
+  price: "₹999",
   href: "#",
   breadcrumbs: [
     { id: 1, name: "Men", href: "#" },
@@ -87,14 +94,43 @@ function classNames(...classes) {
 }
 
 export default function ProductDetails() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
-  const navigate = useNavigate();
+  // const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+  // const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
   
-  const handleAddToCart=()=>{
-    navigate('/cart')
+  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+  const [selectedSize, setSelectedSize] = useState();
+  const [activeImage, setActiveImage] = useState(null);
+  
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  const { customersProduct } = useSelector((store) => store);
+  const { productId } = useParams();
+  const jwt = localStorage.getItem("jwt");
+  // console.log("param " ,productId, customersProduct.product);
+
+  const handleSetActiveImage = (image) => {
+    setActiveImage(image);
+  };
+
+  const handleSubmit = () => {
+    const data = {productId, size: selectedSize.name};
+    dispatch(addItemToCart({ data, jwt }));
+    navigate("/cart");
   }
+
+  // const handleAddToCart=()=>{
+  //   navigate('/cart')
+
+  useEffect(() => {
+    
+    const data = { productId: Number(productId), jwt };
+    dispatch(findProductsById(data));
+    dispatch(getAllReviews(productId));
+  }, [productId])
+  
+
+  
   return (
     <div className="bg-white lg:px-20">
       <div className="pt-6">
@@ -136,22 +172,26 @@ export default function ProductDetails() {
             </li>
           </ol>
         </nav>
-
+        
+        {/* Product details */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-10 px-4 pt-10">
           {/* Image gallery */}
           <div className="flex flex-col items-center">
             <div className="overflow-hidden rounded-lg max-w-[30rem] max-h-[35rem]">
               <img
-                src={product.images[0].src}
+                // src={product.images[0].src}
+                src={activeImage?.src || customersProduct.product?.imageUrl}
                 alt={product.images[0].alt}
                 className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="flex flex-wrap space-x-5 justify-center">
-              {product.images.map((item) => (
-                <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg max-w-[5rem] max-h-[5rem] mt-4 ">
+              {product.images.map((image) => (
+                <div 
+                  onClick={() => handleSetActiveImage(image)}
+                  className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg max-w-[5rem] max-h-[5rem] mt-4 ">
                   <img
-                    src={item.src}
+                    src={image.src}
                     alt={product.images[1].alt}
                     className="h-full w-full object-cover object-center"
                   />
@@ -178,9 +218,11 @@ export default function ProductDetails() {
           <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24 lg:pt-8">
             <div className="lg:col-span-2 ">
               <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
-                {product.brand}
+                {customersProduct.product?.brand}
               </h1>
-              <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1"></h1>
+              <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
+                {customersProduct.product?.title}
+              </h1>
             </div>
 
             {/* Options */}
@@ -188,29 +230,38 @@ export default function ProductDetails() {
               <h2 className="sr-only">Product information</h2>
 
               <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900 mt-6">
-                <p className="font-semibold">₹1200</p>
-                <p className="opacity-50 line-through">₹1500</p>
-                <p className="text-green-600 font-semibold">15% off</p>
+                <p className="font-semibold">₹{customersProduct.product?.discountedPrice}</p>
+                <p className="opacity-50 line-through">₹{customersProduct.product?.price}</p>
+                <p className="text-green-600 font-semibold">{customersProduct.product?.discountPercent}% off</p>
               </div>
 
               {/* Reviews */}
               <div className="mt-6">
                 <div className="flex items-center space-x-5">
-                  <Rating name="read-only" value={4.5} readOnly />
+                  <Rating 
+                    name="read-only" 
+                    value={4.5} 
+                    precision={0.5}
+                    readOnly 
+                  />
+
                   <p className="opacity-50 text-sm">5460 Ratings</p>
                   <p
                     className="ml-3 text-sm font-medium text-indigo-600 
                  hover:text-indigo-500"
                   >
-                    800 Reviews
+                    {reviews.totalCount} Reviews
                   </p>
                 </div>
               </div>
 
-              <form className="mt-10">
+              <form className="mt-10" onSubmit={handleSubmit}>
                 {/* Colors */}
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Color</h3>
+                <div className="mt-10">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">Color</h3>
+                  </div>
+                  
 
                   <RadioGroup
                     value={selectedColor}
@@ -250,6 +301,7 @@ export default function ProductDetails() {
                   </RadioGroup>
                 </div>
 
+              <form className="mt-10" onSubmit={handleSubmit}></form>        
                 {/* Sizes */}
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
@@ -332,7 +384,7 @@ export default function ProductDetails() {
                 </div>
 
                 <Button
-                onClick={handleAddToCart}
+                //onClick={handleAddToCart}
                   type="submit"
                   variant="contained"
                   sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }}
@@ -349,7 +401,7 @@ export default function ProductDetails() {
 
                 <div className="space-y-6">
                   <p className="text-base text-gray-900">
-                    {product.description}
+                    {customersProduct.product?.description}
                   </p>
                 </div>
               </div>
@@ -389,8 +441,8 @@ export default function ProductDetails() {
             <Grid container spacing={7}>
               <Grid item xs={7}>
                 <div className="space-y-5">
-                  {[1, 1, 1].map((item) => (
-                    <ProductReviewCard />
+                  {customersProduct.product?.reviews.map((item ,i) => (
+                    <ProductReviewCard item={item} />
                   ))}
                 </div>
               </Grid>
@@ -399,12 +451,21 @@ export default function ProductDetails() {
                 <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
 
                 <div className="flex items-center space-x-3">
-                  <Rating value={4.6} precision={0.5} readOnly />
+                  <Rating 
+                    value={4.6} 
+                    precision={0.5} 
+                    readOnly 
+                  />
+
                   <p className=" opacity-70">3500 Ratings</p>
                 </div>
 
                 <Box className="mt-5">
-                  <Grid container alignItems="center" gap={2}>
+                  <Grid 
+                    container 
+                    alignItems="center" 
+                    gap={2}
+                  >
                     <Grid item xs={2}>
                       <p>Excellent</p>
                     </Grid>
@@ -418,7 +479,11 @@ export default function ProductDetails() {
                       />
                     </Grid>
 
-                    <Grid container alignItems="center" gap={2}>
+                    <Grid 
+                      container 
+                      alignItems="center" 
+                      gap={2}
+                    >
                       <Grid item xs={2}>
                         <p>Good</p>
                       </Grid>
@@ -488,7 +553,7 @@ export default function ProductDetails() {
 
           <h1 className="py-5 text-xl font-semibold">Similar Products</h1>
           <div className="flex flex-wrap space-y-5">
-            {mens_kurta.map((item)=> <HomeSectionCard product={item}/> )}                
+            {gownsPage1 .map((item)=> <HomeProductCard product={item}/> )}                
           </div>
 
         </section>

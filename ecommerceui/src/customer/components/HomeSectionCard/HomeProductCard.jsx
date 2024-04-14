@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const HomeSectionCard = ({product}) => {
+const HomeProductCard = ({ product }) => {
   
   const navigate = useNavigate();
 
@@ -42,4 +42,4 @@ const HomeSectionCard = ({product}) => {
   );
 };
 
-export default HomeSectionCard;
+export default HomeProductCard;

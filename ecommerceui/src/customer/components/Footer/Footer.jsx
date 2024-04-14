@@ -14,59 +14,85 @@ const Footer = () => {
           <Typography className='pb-5' variant='h6' gutterBottom>
             Company
           </Typography>
-          <Typography className='pb-5' variant='h6' gutterBottom>
+          <Typography component='p' variant='body2' gutterBottom>
             About
           </Typography>
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Blog</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Blog
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Press</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Press
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Jobs</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Jobs
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Partners</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Partners
+            </Typography>
           </div>
       
         </Grid>
         {/* 2nd grid */}
         <Grid item xs={12} sm={6} md={3} >
 
-          <Typography className='pb-5' variant='h6'>Solutions</Typography>
-          <Typography className='pb-5' variant='h6'>About</Typography>
+          <Typography className='pb-5' variant='h6' gutterBottom>
+            Solutions
+          </Typography>
+          
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Marketing</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Marketing
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Analytics</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Analytics
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Commerce</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Commerce
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Insights</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Insights
+            </Typography>
           </div>
       
         </Grid>
         {/* 3rd grid */}
         <Grid item xs={12} sm={6} md={3} >
 
-          <Typography className='pb-5' variant='h6'>Documentation</Typography>
-          <Typography className='pb-5' variant='h6'>About</Typography>
+          <Typography className='pb-5' variant='h6'>
+            Documentation
+          </Typography>
+          <Typography component='p' variant='body2'>
+            About
+          </Typography>
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Guides</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              Guides
+            </Typography>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >API Status</Button>
+            <Typography component='p' variant='body2' gutterBottom >
+              API Status
+            </Typography>
           </div>
 
           {/* <div>
@@ -84,19 +110,19 @@ const Footer = () => {
           <Typography className='pb-5' variant='h6'>Legal</Typography>
           <Typography className='pb-5' variant='h6'>About</Typography>
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Claim</Button>
+            <Button component='p' variant='body2' gutterBottom >Claim</Button>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Privacy</Button>
+            <Button component='p' variant='body2' gutterBottom >Privacy</Button>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Terms</Button>
+            <Button component='p' variant='body2' gutterBottom >Terms</Button>
           </div>
 
           <div>
-            <Button className='pb-5' variant='h6' gutterBottom >Report</Button>
+            <Button component='p' variant='body2' gutterBottom >Report</Button>
           </div>
       
         </Grid>

@@ -37,7 +37,11 @@ const AuthModal = ({ handleClose, open }) => {
         aria-describedby="modal-modal-description"
       >
         <Box className="rounded-md" sx={style}>
-          {location.pathname === "/login" ? (<LoginForm />) : (<RegisterForm />)}         
+          {location.pathname === "/login" ? (
+            <LoginForm />
+            ) : (
+              <RegisterForm />
+            )}         
         </Box>
 
       </Modal>

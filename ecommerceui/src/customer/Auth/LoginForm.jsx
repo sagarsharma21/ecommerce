@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUser, login } from "../../State/Auth/Action";
 
-const LoginForm = () => {
+const LoginForm = ({ handleNext }) => {
   
   const navigate = useNavigate();
   const dispatch = useDispatch();

@@ -29,13 +29,13 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { navigation as  NavigationData  } from './NavigationData';
+//import { navigationData as  navigation  } from './NavigationData';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
-// import { navigation } from "../../../config/navigationMenu";
+import { navigation } from "../Navigation/NavigationData";
 import AuthModal from "../../Auth/AuthModal";
 import { useDispatch, useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
@@ -101,7 +101,7 @@ export default function Navigation() {
   };
   const handleMyOrderClick = () => {
     handleCloseUserMenu()
-    auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order");
+    //auth.user?.role==="ROLE_ADMIN"?navigate("/admin"):navigate("/account/order");
     
   }
 
@@ -148,7 +148,7 @@ export default function Navigation() {
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
-                      {NavigationData.categories.map((category) => (
+                      {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
                           className={({ selected }) =>
@@ -166,7 +166,7 @@ export default function Navigation() {
                     </Tab.List>
                   </div>
                   <Tab.Panels as={Fragment}>
-                    {NavigationData.categories.map((category) => (
+                    {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
                         className="space-y-10 px-4 pb-8 pt-10"
@@ -230,7 +230,7 @@ export default function Navigation() {
                 </Tab.Group>
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  {NavigationData.pages.map((page) => (
+                  {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
@@ -274,7 +274,7 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+          Get free delivery on orders over $10
         </p>
 
         <nav aria-label="Top" className="mx-auto">
@@ -306,7 +306,7 @@ export default function Navigation() {
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch z-10">
                 <div className="flex h-full space-x-8">
-                  {NavigationData.categories.map((category) => (
+                  {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       {({ open, close }) => (
                         <>
@@ -375,6 +375,7 @@ export default function Navigation() {
                                       ))}
                                     </div>
                                     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                    
                                       {category.sections.map((section) => (
                                         <div key={section.name}>
                                           <p
@@ -423,7 +424,7 @@ export default function Navigation() {
                     </Popover>
                   ))}
 
-                  {NavigationData.pages.map((page) => (
+                  {navigation.pages.map((page) => (
                     <a
                       key={page.name}
                       href={page.href}
@@ -475,16 +476,19 @@ export default function Navigation() {
                         }}
                       >
               
-                        <MenuItem onClick={handleCloseUserMenu}>
+                        <MenuItem onClick={handleMyOrderClick}>
                           Profile 
                         </MenuItem>
                         
                         <MenuItem onClick={()=> navigate('/account/order')}//onClick={handleMyOrderClick}
-                        >My Orders
+                          >
+                          My Orders
                           {/* {auth.user?.role==="ROLE_ADMIN"?"Admin Dashboard":"My Orders"} */}
                         </MenuItem>
-                        <MenuItem onClick={handleLogout}
-                        >Logout</MenuItem>
+
+                        <MenuItem onClick={handleLogout}>
+                          Logout
+                        </MenuItem>
                       </Menu>
                     </div>
                   ) : (

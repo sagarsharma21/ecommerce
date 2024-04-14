@@ -42,4 +42,4 @@ const CustomerRoutes = () => {
   )
 }
 
-export default CustomerRoutes
+export default CustomerRoutes;
