@@ -22,6 +22,7 @@ export const register = (userData) => async (dispatch)=>{
             dispatch(registerSuccess(user.jwt))
 
     } catch (error){
+        console.log("error ", error);
         dispatch(registerFailure(error.message))
     }
 }
@@ -71,6 +72,7 @@ export const getUser = (jwt) => async (dispatch)=>{
         dispatch(getUserSuccess(user))
 
     } catch (error) {
+        console.log("error", error);
         dispatch(getUserFailure(error.message))
     }
 }

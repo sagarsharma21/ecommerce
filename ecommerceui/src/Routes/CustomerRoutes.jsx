@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation  } from 'react-router-dom'
 import { } from 'react-router-dom'
 import HomePage from '../customer/pages/HomePage/HomePage'
 import Cart from '../customer/components/Cart/Cart'
@@ -8,10 +8,18 @@ import ProductDetails from '../customer/components/ProductDetails/ProductDetails
 import Checkout from '../customer/components/Checkout/Checkout'
 import OrderDetails from '../customer/components/Order/OrderDetails'
 import { Home } from '@mui/icons-material'
+//import { ThemeProvider } from '@emotion/react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { customTheme, customerTheme } from '../Theme/customTheme'
 
 const CustomerRoutes = () => {
+  const location = useLocation();
+
+  // const showNavigation = location.pathname ! == "*";
+
   return (
     <div>CustomerRoutes
+      <ThemeProvider theme={customerTheme}>
         <div>
             <Routes>
               <Route path='/login' element={<HomePage/>}></Route>
@@ -38,6 +46,7 @@ const CustomerRoutes = () => {
 
             </Routes>
         </div>
+      </ThemeProvider> 
     </div>
   )
 }

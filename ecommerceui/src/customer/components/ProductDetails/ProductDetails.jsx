@@ -553,7 +553,9 @@ export default function ProductDetails() {
 
           <h1 className="py-5 text-xl font-semibold">Similar Products</h1>
           <div className="flex flex-wrap space-y-5">
-            {gownsPage1 .map((item)=> <HomeProductCard product={item}/> )}                
+            {gownsPage1.map((item) => (
+            <HomeProductCard product={item}/> 
+          ))}                
           </div>
 
         </section>
