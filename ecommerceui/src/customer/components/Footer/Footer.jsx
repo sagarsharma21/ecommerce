@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, Button, Link } from '@mui/material'
+import { Grid, Typography, Link } from '@mui/material'
 
 const Footer = () => {
   return (
@@ -23,13 +23,13 @@ const Footer = () => {
             </Typography>
           </div>
 
-          <div>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               Press
             </Typography>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               Jobs
             </Typography>
@@ -39,7 +39,7 @@ const Footer = () => {
             <Typography component='p' variant='body2' gutterBottom >
               Partners
             </Typography>
-          </div>
+          </div> */}
       
         </Grid>
         {/* 2nd grid */}
@@ -55,11 +55,11 @@ const Footer = () => {
             </Typography>
           </div>
 
-          <div>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               Analytics
             </Typography>
-          </div>
+          </div> */}
 
           <div>
             <Typography component='p' variant='body2' gutterBottom >
@@ -89,11 +89,11 @@ const Footer = () => {
             </Typography>
           </div>
 
-          <div>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               API Status
             </Typography>
-          </div>
+          </div> */}
 
           {/* <div>
             <Button className='pb-5' variant='h6' gutterBottom >Jobs</Button>
@@ -107,13 +107,13 @@ const Footer = () => {
         {/* 4th grid */}
         <Grid item xs={12} sm={6} md={3} >
 
-          <Typography className='pb-5' variant='h6'>Legal</Typography>
           <Typography className='pb-5' variant='h6'>About</Typography>
-          <div>
+          <Typography component='p' variant='body2'>Legal</Typography>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               Claim
             </Typography>
-          </div>
+          </div> */}
 
           <div>
             <Typography component='p' variant='body2' gutterBottom >
@@ -127,16 +127,16 @@ const Footer = () => {
             </Typography>
           </div>
 
-          <div>
+          {/* <div>
             <Typography component='p' variant='body2' gutterBottom >
               Report
             </Typography>
-          </div>
+          </div> */}
       
         </Grid>
 
 {/* FooterNote */}
-        <Grid className='pt-20' item xs={12} >
+        <Grid className='pt-5' item xs={12} >
           <Typography variant='body2' component='p' align='center' >
             &copy; 2024 My Company. All rights reserved.
           </Typography>

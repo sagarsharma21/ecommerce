@@ -27,7 +27,7 @@ import ProductReviewCard from "./ProductReviewCard";
 import {mens_kurta} from '../../../Data/Men/mens_kurta'
 import { gownsPage1 } from "../../../Data/Gowns/gowns";
 import { lehenga_page1 } from "../../../Data/Women/LehengaCholi";
-import HomeProductCard from '../../components/HomeSectionCard/HomeProductCard'
+import HomeSectionCard from '../../components/HomeSectionCard/HomeSectionCard'
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { productdata } from "../../../Data/data";
@@ -120,8 +120,8 @@ export default function ProductDetails() {
     navigate("/cart");
   }
 
-  // const handleAddToCart=()=>{
-  //   navigate('/cart')
+  const handleAddToCart=()=>{
+    navigate('/cart')}
 
   useEffect(() => {
     
@@ -385,7 +385,7 @@ export default function ProductDetails() {
                 </div></div>
 
                 <Button
-                //onClick={handleAddToCart}
+                  onClick={handleAddToCart}
                   type="submit"
                   variant="contained"
                   sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }}
@@ -555,7 +555,7 @@ export default function ProductDetails() {
           <h1 className="py-5 text-xl font-semibold">Similar Products</h1>
           <div className="flex flex-wrap space-y-5">
             {gownsPage1.map((item) => (
-            <HomeProductCard product={item}/> 
+            <HomeSectionCard product={item}/> 
           ))}                
           </div>
 

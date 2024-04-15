@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import AliceCarousel from "react-alice-carousel";
-import HomeSectionCard from "./HomeProductCard";
+import HomeSectionCard from "./HomeSectionCard";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const HomeProductSection = ({ section, data }) => {
@@ -26,7 +26,7 @@ const HomeProductSection = ({ section, data }) => {
             itemsFit: "contain",
           }
     };
-    const items = data?.slice(0, 10).map((item) => (
+    const items = data.slice(0, 10).map((item) => (
         <div className="">
             {" "}
             <HomeSectionCard product={item} />
@@ -39,7 +39,7 @@ const HomeProductSection = ({ section, data }) => {
         <h2 className="text-2xl font-extrabold text-gray-900 py-5">{section}</h2>
         <div className="relative border p-5">
           <AliceCarousel
-            disableButtonsControls
+            //disableButtonsControls
             disableDotsControls
             mouseTracking
             items={items}

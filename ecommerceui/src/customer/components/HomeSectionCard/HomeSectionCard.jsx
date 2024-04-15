@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const HomeProductCard = ({ product }) => {
+// {HomeProductCard}
+const HomeSectionCard = ({ product }) => {
   
   const navigate = useNavigate();
 
@@ -9,7 +9,7 @@ const HomeProductCard = ({ product }) => {
     <div
       onClick={() => navigate(`/men/clothing/mens_kurta`)}
       className="cursor-pointer flex flex-col items-center bg-white rounded-lg shadow-lg
-    overflow-hidden w-[15rem] mx-3 border"
+    overflow-hidden w-[15rem] mx-3 border border-black"
     >
       {/* <div className="h-[13rem] w-[10rem]">
         <img
@@ -38,8 +38,14 @@ const HomeProductCard = ({ product }) => {
           {product?.title}
         </p>
       </div>
+
+      {/* <div>
+        <h3 className="text-sm font-mono text-green-600">
+          {product?.price}
+        </h3>
+      </div> */}
     </div>
   );
 };
 
-export default HomeProductCard;
+export default HomeSectionCard;

@@ -159,7 +159,7 @@ export default function Product() {
     
   return (
     <div className="bg-white">
-      <div>
+      < div>
         {/* Mobile filter dialog */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>
@@ -211,7 +211,7 @@ export default function Product() {
                         </li>
                       ))} 
                     </ul> */}
-{/* Edit filters.map */}
+            {/* Edit filters.map */}
                     {filters.map((section) => (
                       <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
                         {({ open }) => (

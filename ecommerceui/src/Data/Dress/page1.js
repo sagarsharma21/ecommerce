@@ -7,7 +7,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 1299,
     "price": 2499,
-    "discountPersent": 50,
+    "discountPercent": 50,
     "size": [
       {
         "name": "S",
@@ -23,9 +23,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -33,11 +33,11 @@ export const dressPage1 = [
     "imageUrl":
       "https://rukminim1.flixcart.com/image/612/612/xif0q/kurta/1/h/g/m-pw333-purshottam-wala-original-imag8zf6ybkmhehy-bb.jpeg?q=70",
     "brand": "Daevish",
-    "title": "Women Maxi Blue Dress",
+    "title": "Women Maxi Blue Dress Lace Work \n O",
     "color": "",
     "discountedPrice": 341,
     "price": 1899,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -53,9 +53,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -63,11 +63,11 @@ export const dressPage1 = [
     "imageUrl":
       "https://rukminim1.flixcart.com/image/612/612/xif0q/dress/z/s/i/s-a1-zwerlon-original-imagn9uycxbhshur.jpeg?q=70",
     "brand": "ZWERLON",
-    "title": "Women A-line Purple Dress",
-    "color": "",
+    "title": "Women A-line Purple Dress   \n",
+    "color": "Blue",
     "discountedPrice": 499,
     "price": 1999,
-    "discountPersent": 75,
+    "discountPercent": 75,
     "size": [
       {
         "name": "S",
@@ -83,9 +83,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -94,10 +94,10 @@ export const dressPage1 = [
       "https://rukminim1.flixcart.com/image/612/612/xif0q/dress/q/7/v/s-pwd322-purshottam-wala-original-imagm7ypaavduvnm.jpeg?q=70",
     "brand": "Purshottam Wala",
     "title": "Women Fit and Flare Black Dress",
-    "color": "",
+    "color": "Black",
     "discountedPrice": 359,
     "price": 2099,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -113,9 +113,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -125,10 +125,10 @@ export const dressPage1 = [
       "https://rukminim1.flixcart.com/image/612/612/xif0q/dress/e/a/p/s-pwd322-purshottam-wala-original-imagm6ywr7vz95sz.jpeg?q=70",
     "brand": "Purshottam Wala",
     "title": "Women Fit and Flare Blue Dress",
-    "color": "",
+    "color": "Blue",
     "discountedPrice": 359,
     "price": 2099,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -144,21 +144,20 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
   {
-    "imageUrl":
-      "https://rukminim1.flixcart.com/image/612/612/kdlzte80/ethnic-set/p/f/q/l-3209-mint-02-neysa-original-imafuh85unfjczkd.jpeg?q=70",
+    "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/d/g/q/xxl-sfdrss11582-sassafras-original-imaguerq7kzgwzau.jpeg?q=70",
     "brand": "NEYSA",
-    "title": "Women Two Piece Dress Light Green Dress",
-    "color": "",
+    "title": "Women Flare Dress Moon Black Dress",
+    "color": "Black",
     "discountedPrice": 827,
     "price": 1799,
-    "discountPersent": 54,
+    "discountPercent": 54,
     "size": [
       {
         "name": "S",
@@ -174,9 +173,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -188,7 +187,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 351,
     "price": 1599,
-    "discountPersent": 78,
+    "discountPercent": 78,
     "size": [
       {
         "name": "S",
@@ -204,9 +203,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -218,7 +217,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 499,
     "price": 2497,
-    "discountPersent": 80,
+    "discountPercent": 80,
     "size": [
       {
         "name": "S",
@@ -234,9 +233,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -248,7 +247,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 449,
     "price": 1499,
-    "discountPersent": 70,
+    "discountPercent": 70,
     "size": [
       {
         "name": "S",
@@ -264,9 +263,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -278,7 +277,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 719,
     "price": 1999,
-    "discountPersent": 64,
+    "discountPercent": 64,
     "size": [
       {
         "name": "S",
@@ -294,9 +293,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -308,7 +307,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 349,
     "price": 1999,
-    "discountPersent": 65,
+    "discountPercent": 65,
     "size": [
       {
         "name": "S",
@@ -324,9 +323,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -338,7 +337,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 299,
     "price": 1997,
-    "discountPersent": 85,
+    "discountPercent": 85,
     "size": [
       {
         "name": "S",
@@ -354,9 +353,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -368,7 +367,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 499,
     "price": 2330,
-    "discountPersent": 78,
+    "discountPercent": 78,
     "size": [
       {
         "name": "S",
@@ -384,9 +383,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -398,7 +397,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 359,
     "price": 1799,
-    "discountPersent": 80,
+    "discountPercent": 80,
     "size": [
       {
         "name": "S",
@@ -414,9 +413,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -428,7 +427,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 474,
     "price": 1289,
-    "discountPersent": 47,
+    "discountPercent": 47,
     "size": [
       {
         "name": "S",
@@ -444,9 +443,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -458,7 +457,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 827,
     "price": 2799,
-    "discountPersent": 70,
+    "discountPercent": 70,
     "size": [
       {
         "name": "S",
@@ -474,9 +473,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -488,7 +487,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 351,
     "price": 2999,
-    "discountPersent": 64,
+    "discountPercent": 64,
     "size": [
       {
         "name": "S",
@@ -504,9 +503,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -518,7 +517,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 359,
     "price": 1799,
-    "discountPersent": 80,
+    "discountPercent": 80,
     "size": [
       {
         "name": "S",
@@ -534,9 +533,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -548,7 +547,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 449,
     "price": 1499,
-    "discountPersent": 70,
+    "discountPercent": 70,
     "size": [
       {
         "name": "S",
@@ -564,9 +563,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -578,7 +577,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 959,
     "price": 1999,
-    "discountPersent": 52,
+    "discountPercent": 52,
     "size": [
       {
         "name": "S",
@@ -594,9 +593,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -608,7 +607,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 499,
     "price": 1999,
-    "discountPersent": 75,
+    "discountPercent": 75,
     "size": [
       {
         "name": "S",
@@ -624,9 +623,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -638,7 +637,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 371,
     "price": 2699,
-    "discountPersent": 86,
+    "discountPercent": 86,
     "size": [
       {
         "name": "S",
@@ -654,9 +653,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -668,7 +667,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 348,
     "price": 1999,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -684,9 +683,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -698,7 +697,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 495,
     "price": 1199,
-    "discountPersent": 58,
+    "discountPercent": 58,
     "size": [
       {
         "name": "S",
@@ -714,9 +713,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -728,7 +727,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 2699,
     "price": 5999,
-    "discountPersent": 55,
+    "discountPercent": 55,
     "size": [
       {
         "name": "S",
@@ -744,9 +743,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -759,7 +758,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 439,
     "price": 1499,
-    "discountPersent": 70,
+    "discountPercent": 70,
     "size": [
       {
         "name": "S",
@@ -775,9 +774,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -789,7 +788,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 299,
     "price": 1999,
-    "discountPersent": 85,
+    "discountPercent": 85,
     "size": [
       {
         "name": "S",
@@ -805,9 +804,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -819,7 +818,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 1599,
     "price": 3999,
-    "discountPersent": 60,
+    "discountPercent": 60,
     "size": [
       {
         "name": "S",
@@ -835,9 +834,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -849,7 +848,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 1779,
     "price": 4999,
-    "discountPersent": 64,
+    "discountPercent": 64,
     "size": [
       {
         "name": "S",
@@ -865,9 +864,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -879,7 +878,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 341,
     "price": 1899,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -895,9 +894,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -909,7 +908,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 349,
     "price": 3999,
-    "discountPersent": 65,
+    "discountPercent": 65,
     "size": [
       {
         "name": "S",
@@ -925,9 +924,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -939,7 +938,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 899,
     "price": 2899,
-    "discountPersent": 68,
+    "discountPercent": 68,
     "size": [
       {
         "name": "S",
@@ -955,9 +954,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -969,7 +968,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 349,
     "price": 2063,
-    "discountPersent": 83,
+    "discountPercent": 83,
     "size": [
       {
         "name": "S",
@@ -985,9 +984,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -999,7 +998,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 845,
     "price": 2798,
-    "discountPersent": 69,
+    "discountPercent": 69,
     "size": [
       {
         "name": "S",
@@ -1015,9 +1014,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -1029,7 +1028,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 1558,
     "price": 4599,
-    "discountPersent": 65,
+    "discountPercent": 65,
     "size": [
       {
         "name": "S",
@@ -1045,9 +1044,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -1059,7 +1058,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 351,
     "price": 4999,
-    "discountPersent": 64,
+    "discountPercent": 64,
     "size": [
       {
         "name": "S",
@@ -1075,9 +1074,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },
@@ -1089,7 +1088,7 @@ export const dressPage1 = [
     "color": "",
     "discountedPrice": 341,
     "price": 1899,
-    "discountPersent": 82,
+    "discountPercent": 82,
     "size": [
       {
         "name": "S",
@@ -1105,9 +1104,9 @@ export const dressPage1 = [
       }
     ],
     "quantity": 100,
-    "topLavelCategory": "Women",
-    "secondLavelCategory": "Clothing",
-    "thirdLavelCategory": "Dress",
+    "topLevelCategory": "Women",
+    "secondLevelCategory": "Clothing",
+    "thirdLevelCategory": "Dress",
     "description":
       "Make a statement with this stylish purple A-line dress from ZWERLON. Made with high-quality fabric, this dress is perfect for any occasion."
   },

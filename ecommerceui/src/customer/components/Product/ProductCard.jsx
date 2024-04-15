@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
       </div>
       { Demo Product Card */}
 
-      <div className='h-[20rem] '>
+      <div className='h-[20rem] '>ProductCard
         <img className='h-full w-full object-cover object-left-top ' src={imageUrl} alt='' />
       </div>
 

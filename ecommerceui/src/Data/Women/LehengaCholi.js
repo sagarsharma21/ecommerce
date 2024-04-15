@@ -1,12 +1,11 @@
 export const lehenga_page1 = [
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/u/g/a/free-half-sleeve-vbnd-fddj-astonblue-original-imagp286bmcaabbj.jpeg?q=70",
+      "image":"https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/s/w/4/s-sleeveless-mittoo-patlani-style-original-imagwu4yp286pspr.jpeg?q=70",
       "brand": "AstonBlue",
-     "title": "Self Design Semi Stitched Lehenga Choli",
-      "color": "Yellow",
-      discountedPrice: "₹35,999",
-      price: "₹39,999",
+      "title": "Self Design Semi Stitched Lehenga Choli",
+      "color": "Blue",
+      discountedPrice: "₹4,999",
+      price: "₹6,999",
       size: [
         {
           name: "S",
@@ -21,7 +20,7 @@ export const lehenga_page1 = [
           quantity: 50,
         },
       ],
-      "discountPersent": "10% off",
+      "discountPersent": "29% off",
       description:
         "Yellow Readymade Lehenga in Net fabric  The Lehenga is embellished with Mirrorwork embroidery Accompanied with an Readymade blouse and dupattaComes with the Koskii promise of premium quality",
         "topLavelCategory": "Women",
@@ -29,13 +28,12 @@ export const lehenga_page1 = [
         "thirdLavelCategory": "lengha_choli",
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/kmz7qfk0/lehenga-choli/m/0/t/s-sleeveless-l032-rayie-collection-original-imagfrbqhvddrnbd.jpeg?q=70",
-      "brand": "rayie collection",
-     "title": "Embroidered Stitched Lehenga & Crop Top",
+      "image":"https://rukminim2.flixcart.com/image/612/612/ks0onm80/lehenga-choli/t/h/r/free-half-sleeve-lehenga-cholis-swastik-purvaja-original-imag5zk6yzdt8g3f.jpeg?q=70",
+      "brand": "Purva collection",
+      "title": "Embroidered Stitched Lehenga & Crop Top",
       "color": "Black",
-      discountedPrice: "₹19,124",
-      price: "₹35,999",
+      discountedPrice: "₹9,124",
+      price: "₹15,999",
       size: [
         {
           name: "S",
@@ -56,7 +54,7 @@ export const lehenga_page1 = [
     },
     {
       "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/5/n/h/l-3-4-sleeve-black-liva-original-imagmeyw2zzbch2g.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/z/i/j/free-short-sleeve-new-jacquard-banarasi-zari-work-lehenga-choli-original-imafug3fwezwfdzb.jpeg?q=70",
       "brand": "Liva",
      "title": "Embroidered Stitched Lehenga & Crop Top",
       "color": "Black",
@@ -80,13 +78,12 @@ export const lehenga_page1 = [
       description:"The Lehenga is embellished with Mirrorwork embroidery Accompanied with an Readymade blouse and dupatta Comes with the Koskii promise of premium quality"
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/b/h/z/xl-sleeveless-owa2cd2320a-soch-original-imagjvmyhy63ms7z.jpeg?q=70",
-      "brand": "soch",
+      "imageUrl":"https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/g/u/q/xs-half-sleeve-frtbset-1003-xs-frolic-rolic-original-imagz2fa6yfyh3wy.jpeg?q=70",
+      "brand": "Soch",
      "title": "Embellished Stitched Lehenga Choli",
       "color": "Yellow",
-      discountedPrice: "₹12,998",
-      price: "",
+      discountedPrice: "₹11,999",
+      price: "₹14,999",
       size: [
         {
           name: "S",
@@ -104,11 +101,10 @@ export const lehenga_page1 = [
       "discountPersent": "",
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/y/d/8/l-3-4-sleeve-green-liva-original-imagmez3duzyzzxz.jpeg?q=70",
+      "imageUrl":"https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/o/i/l/xxl-half-sleeve-chinon-digital-print-lahenga-choli-with-dupatta-original-imagw4p6euxpvxu5.jpeg?q=70",
       "brand": "Liva",
-     "title": "Embroidered Stitched Lehenga & Crop Top",
-      "color": "Green",
+      "title": "Mirror Work Stitched Lehenga & Crop Top",
+      "color": "Brown",
       discountedPrice: "₹9,999",
       price: "₹18,000",
       size: [
@@ -129,13 +125,12 @@ export const lehenga_page1 = [
       description:"The Lehenga is embellished with Mirrorwork embroidery Accompanied with an Readymade blouse and dupatta Comes with the Koskii promise of premium quality"
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/j/b/g/xl-sleeveless-owa2cd2319a-soch-original-imagjvmysh3z9egk.jpeg?q=70",
-      "brand": "soch",
-     "title": "Solid Stitched Lehenga Choli",
+      "imageUrl":"https://rukminim2.flixcart.com/image/612/612/kdnf98w0/lehenga-choli/f/z/t/free-half-sleeve-lehenga-112-aqua-gold-best-seller-sexy-original-imafuhmktkaekps8.jpeg?q=70",
+      "brand": "Soch",
+      "title": "Solid Stitched Lehenga Choli",
       "color": "Dark Blue",
-      discountedPrice: "₹9,998",
-      price: "",
+      discountedPrice: "₹3,499",
+      price: "5999",
       size: [
         {
           name: "S",
@@ -150,7 +145,7 @@ export const lehenga_page1 = [
           quantity: 50,
         },
       ],
-      "discountPersent": "30% off",
+      "discountPersent": "60% off",
     },
    
   {
@@ -179,11 +174,10 @@ export const lehenga_page1 = [
       description:"The Lehenga is embellished with Mirrorwork embroidery Accompanied with an Readymade blouse and dupatta Comes with the Koskii promise of premium quality"
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/r/8/u/free-half-sleeve-mjo4061-mjo-fashion-original-imagmyk9yxpykc7j.jpeg?q=70",
+      "imageUrl":"https://rukminim2.flixcart.com/image/612/612/kxrvi4w0/lehenga-choli/3/l/m/free-3-4-sleeve-women-s-banarasi-jacquard-lehenga-mad-moon-original-imaga5k5j6vyfhb9.jpeg?q=70",
       "brand": "mjo fashion",
-     "title": "Embroidered Semi Stitched Lehenga Choli",
-      "color": "Maroon",
+      "title": "Embroidered Semi Stitched Lehenga Choli",
+      "color": "Yellow",
       discountedPrice: "₹7,999",
       price: "₹9,550",
       size: [
@@ -230,12 +224,12 @@ export const lehenga_page1 = [
     },
     {
       "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/sari/j/f/n/free-verveecouture-vv-126-vervee-couture-unstitched-original-imagnhgjmgrth4xr.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/q/i/n/free-sleeveless-bindu-lehenga-color-bucket-original-imagt8ayts4bebg8.jpeg?q=70",
       "brand": "Vervee Couture",
-     "title": "Embroidered Semi Stitched Lehenga Choli",
-      "color": "Blue",
-      discountedPrice: "₹7,629",
-      price: "₹15,239",
+      "title": "Embroidered Semi Stitched Lehenga Choli",
+      "color": "Black",
+      discountedPrice: "₹2,629",
+      price: "₹3,239",
       size: [
         {
           name: "S",
@@ -250,14 +244,13 @@ export const lehenga_page1 = [
           quantity: 50,
         },
       ],
-      "discountPersent": "49% off",
+      "discountPersent": "19% off",
       description:"The Lehenga is embellished with Mirrorwork embroidery Accompanied with an Readymade blouse and dupatta Comes with the Koskii promise of premium quality"
     },
     {
-      "imageUrl":
-        "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/z/c/c/free-short-sleeve-sochncugc5604-soch-original-imaghy7nebe4jzhn.jpeg?q=70",
+      "imageUrl":"https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/l/x/d/free-full-sleeve-lehenga-lehenga-for-women-lehenga-choli-net-original-imaggcwfb3pjh2hf.jpeg?q=70",
       "brand": "soch",
-     "title": "Embroidered Semi Stitched Lehenga Choli",
+      "title": "Embroidered Semi Stitched Lehenga Choli",
       "color": "Maroon",
       discountedPrice: "₹6,999",
       price: "₹13,998",

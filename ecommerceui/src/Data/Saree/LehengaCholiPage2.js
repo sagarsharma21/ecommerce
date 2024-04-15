@@ -1,4 +1,4 @@
-export const lehngacholiPage2=[
+export const lehengacholiPage2=[
     {
       image:
         "https://rukminim1.flixcart.com/image/612/612/xif0q/lehenga-choli/y/g/m/l-sleeveless-shset95222-shae-by-sassafras-original-imaggjzkwyyyezzg.jpeg?q=70",

@@ -200,6 +200,7 @@ export default function Navigation() {
                             </div>
                           ))}
                         </div>
+                        {/* Clothing - Accessories - Brands */}
                         {category.sections.map((section) => (
                           <div key={section.name}>
                             <p
@@ -217,7 +218,7 @@ export default function Navigation() {
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
                                   <p className="-m-2 block p-2 text-gray-500">
-                                    {"item.name"}
+                                    {item.name}
                                   </p>
                                 </li>
                               ))}
@@ -229,7 +230,7 @@ export default function Navigation() {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+                {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
@@ -240,7 +241,7 @@ export default function Navigation() {
                       </a>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
@@ -256,12 +257,12 @@ export default function Navigation() {
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="/" className="-m-2 flex items-center p-2">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
+                      src="https://static.vecteezy.com/system/resources/previews/004/757/123/original/india-flag-free-vector.jpg" //src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      alt="india flag icon"
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span className="ml-3 block text-base font-medium text-gray-900">
-                      CAD
+                      INR
                     </span>
                     <span className="sr-only">, change currency</span>
                   </a>

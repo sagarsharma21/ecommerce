@@ -6,7 +6,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,455",
         "price": "₹1,599",
-        "disscount": "9% off",
+        "discountPercent": "9% off",
         "size": ""
     },
     {
@@ -16,17 +16,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,117",
         "price": "₹1,999",
-        "disscount": "44% off",
+        "discountPercent": "44% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/kqidx8w0/shoe/i/4/n/6-brd-406-300-blue-6-birde-blue-original-imag4g8cmfkfzkjg.jpeg?q=70",
         "brand": "BIRDE",
-        "title": "Combo Pack of 2 Sports Shoes Running Shoes For Men",
+        "title": "Combo Pack of 2 Sports Shoes For Men",
         "color": "",
         "selling_price": "₹499",
         "price": "₹998",
-        "disscount": "50% off",
+        "discountPercent": "50% off",
         "size": ""
     },
     {
@@ -36,7 +36,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹299",
         "price": "₹1,299",
-        "disscount": "76% off",
+        "discountPercent": "76% off",
         "size": ""
     },
     {
@@ -46,7 +46,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹249",
         "price": "₹1,299",
-        "disscount": "80% off",
+        "discountPercent": "80% off",
         "size": ""
     },
     {
@@ -56,17 +56,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹199",
         "price": "₹999",
-        "disscount": "80% off",
+        "discountPercent": "80% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/kuzuoi80/shoe/2/k/x/7-brd-574-brd-575-7-birde-multicolor-original-imag7zx8epryeskm.jpeg?q=70",
         "brand": "BIRDE",
-        "title": "Trendy Sport Shoes For Men Pack Of 2 Running Shoes For ...",
+        "title": "Trendy Sport Shoes For Men Pack Of 2",
         "color": "",
         "selling_price": "₹499",
         "price": "₹1,498",
-        "disscount": "66% off",
+        "discountPercent": "66% off",
         "size": ""
     },
     {
@@ -76,7 +76,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹249",
         "price": "₹1,299",
-        "disscount": "80% off",
+        "discountPercent": "80% off",
         "size": ""
     },
     {
@@ -86,7 +86,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹949",
         "price": "₹1,699",
-        "disscount": "44% off",
+        "discountPercent": "44% off",
         "size": ""
     },
     {
@@ -96,7 +96,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹249",
         "price": "₹998",
-        "disscount": "75% off",
+        "discountPercent": "75% off",
         "size": ""
     },
     {
@@ -106,7 +106,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹811",
         "price": "₹1,249",
-        "disscount": "35% off",
+        "discountPercent": "35% off",
         "size": ""
     },
     {
@@ -116,7 +116,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,047",
         "price": "₹1,999",
-        "disscount": "47% off",
+        "discountPercent": "47% off",
         "size": ""
     },
     {
@@ -126,17 +126,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹249",
         "price": "₹1,299",
-        "disscount": "80% off",
+        "discountPercent": "80% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/l0igvww0/shoe/j/x/z/7-brd-678-7-birde-blue-original-imagca7bcj6p99gw.jpeg?q=70",
         "brand": "BIRDE",
-        "title": "Stylish Comfortable Lightweight, Breathable Black Runni...",
+        "title": "Stylish Comfortable Lightweight, Breathable Black",
         "color": "",
         "selling_price": "₹299",
         "price": "₹999",
-        "disscount": "70% off",
+        "discountPercent": "70% off",
         "size": ""
     },
     {
@@ -146,7 +146,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹514",
         "price": "₹999",
-        "disscount": "48% off",
+        "discountPercent": "48% off",
         "size": ""
     },
     {
@@ -156,7 +156,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,329",
         "price": "₹1,799",
-        "disscount": "26% off",
+        "discountPercent": "26% off",
         "size": ""
     },
     {
@@ -166,17 +166,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹896",
         "price": "₹1,120",
-        "disscount": "20% off",
+        "discountPercent": "20% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/f/h/e/7-rng-2cmb-2031-551-41-bruton-blue-white-original-imaggameyhax2hwu.jpeg?q=70",
         "brand": "BRUTON",
-        "title": "omboPack of-2 | sports shoes for men |walking, gym, tre...",
+        "title": "ComboPack of-2 | Sports shoes for men | walking, gym",
         "color": "",
         "selling_price": "₹499",
         "price": "₹2,499",
-        "disscount": "80% off",
+        "discountPercent": "80% off",
         "size": ""
     },
     {
@@ -186,7 +186,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,054",
         "price": "₹1,299",
-        "disscount": "18% off",
+        "discountPercent": "18% off",
         "size": ""
     },
     {
@@ -196,17 +196,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹299",
         "price": "₹1,299",
-        "disscount": "76% off",
+        "discountPercent": "76% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/6/0/r/10-cb-fast-white-rocky-black-10-sfr-multicolor-original-imagmgsbundpa9at.jpeg?q=70",
         "brand": "SFR",
-        "title": "FAST Trenddy Tainer Lace-ups Sporty Casuals Running Sho...",
+        "title": "FAST Trenddy Tainer Lace-ups Sporty Casuals",
         "color": "",
         "selling_price": "₹489",
         "price": "₹1,699",
-        "disscount": "71% off",
+        "discountPercent": "71% off",
         "size": ""
     },
     {
@@ -216,7 +216,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,099",
         "price": "₹1,999",
-        "disscount": "45% off",
+        "discountPercent": "45% off",
         "size": ""
     },
     {
@@ -226,27 +226,27 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹399",
         "price": "₹999",
-        "disscount": "60% off",
+        "discountPercent": "60% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/m/z/l/6-ori-9010-6-bersache-red-original-imagn69etxggadch.jpeg?q=70",
         "brand": "BERSACHE",
-        "title": "Bersache Sports Shoes For Men|Red For Running,Walking,g...",
+        "title": "Bersache Sports Shoes For Men|Red For Walking",
         "color": "",
         "selling_price": "₹649",
         "price": "₹3,842",
-        "disscount": "83% off",
+        "discountPercent": "83% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/l/n/4/-original-imaghvb4ew3j5x9v.jpeg?q=70",
         "brand": "ASE",
-        "title": "Durable Performance Cricket Shoes with Dual Closure, La...",
+        "title": "Durable Performance Cricket Shoes with Dual Closure",
         "color": "",
         "selling_price": "₹939",
         "price": "₹2,250",
-        "disscount": "58% off",
+        "discountPercent": "58% off",
         "size": ""
     },
     {
@@ -256,17 +256,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹494",
         "price": "₹1,499",
-        "disscount": "67% off",
+        "discountPercent": "67% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/f/x/q/9-chrome-01-asian-white-original-imaggaz54tgkqyq6.jpeg?q=70",
         "brand": "asian",
-        "title": "Chrome-01 White Sports,Casual,Walking,Stylish Running S...",
+        "title": "Chrome-01 White Sports,Casual,Walking,Stylish",
         "color": "",
         "selling_price": "₹1,299",
         "price": "₹2,299",
-        "disscount": "43% off",
+        "discountPercent": "43% off",
         "size": ""
     },
     {
@@ -276,7 +276,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,199",
         "price": "₹2,399",
-        "disscount": "50% off",
+        "discountPercent": "50% off",
         "size": ""
     },
     {
@@ -286,7 +286,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹349",
         "price": "₹1,299",
-        "disscount": "73% off",
+        "discountPercent": "73% off",
         "size": ""
     },
     {
@@ -296,7 +296,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹976",
         "price": "₹2,499",
-        "disscount": "60% off",
+        "discountPercent": "60% off",
         "size": ""
     },
     {
@@ -306,7 +306,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,299",
         "price": "₹1,699",
-        "disscount": "23% off",
+        "discountPercent": "23% off",
         "size": ""
     },
     {
@@ -316,7 +316,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹715",
         "price": "₹1,999",
-        "disscount": "64% off",
+        "discountPercent": "64% off",
         "size": ""
     },
     {
@@ -326,7 +326,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,199",
         "price": "₹2,799",
-        "disscount": "57% off",
+        "discountPercent": "57% off",
         "size": ""
     },
     {
@@ -336,7 +336,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹2,657",
         "price": "₹5,299",
-        "disscount": "49% off",
+        "discountPercent": "49% off",
         "size": ""
     },
     {
@@ -346,7 +346,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹299",
         "price": "₹1,299",
-        "disscount": "76% off",
+        "discountPercent": "76% off",
         "size": ""
     },
     {
@@ -356,7 +356,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹942",
         "price": "₹1,699",
-        "disscount": "44% off",
+        "discountPercent": "44% off",
         "size": ""
     },
     {
@@ -366,17 +366,17 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,693",
         "price": "₹3,999",
-        "disscount": "57% off",
+        "discountPercent": "57% off",
         "size": ""
     },
     {
         "image": "https://rukminim1.flixcart.com/image/612/612/k6fd47k0pkrrdj/shoe/x/g/s/9-cdnyafqbdq-world-wear-footwear-original-imafzrkveuhdgdy7.jpeg?q=70",
         "brand": "World Wear Footwear",
-        "title": "Combo Pack of 2 Latest Collection Stylish casual Sports...",
+        "title": "Combo Pack of 2 Latest Collection Stylish Shoes",
         "color": "",
         "selling_price": "₹399",
         "price": "₹998",
-        "disscount": "60% off",
+        "discountPercent": "60% off",
         "size": ""
     },
     {
@@ -386,7 +386,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹759",
         "price": "₹1,299",
-        "disscount": "41% off",
+        "discountPercent": "41% off",
         "size": ""
     },
     {
@@ -396,7 +396,7 @@ export const mensShoesPage1=[
         "color": "",
         "selling_price": "₹1,259",
         "price": "₹2,299",
-        "disscount": "45% off",
+        "discountPercent": "45% off",
         "size": ""
     }
 ]

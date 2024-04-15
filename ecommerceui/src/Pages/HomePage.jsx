@@ -1,12 +1,12 @@
 import React from "react";
-import MainCarousel from "../customer/components/HomeCarousel/MainCarousel";
-import { MainCarouselData } from "../customer/components/HomeCarousel/MainCarouselData";
+import MainCarousel from "../customer/components/MainCarousel/MainCarousel";
+import { MainCarouselData } from "../customer/components/MainCarousel/MainCarouselData";
 import HomeProductSection from "../customer/components/HomeSectionCard/HomeProductSection";
 import { sareePage1 } from "../Data/Saree/page1";
 import { dressPage1 } from "../Data/Dress/page1";
 import { gownsPage1 } from "../Data/Gowns/gowns";
 //import {kurta}
-import { mensShoesPage1 } from "../Data/Shoes";
+import { mensShoesPage1 } from "../Data/Shoes/Shoes"; 
 import { mens_kurta } from "../Data/Men/mens_kurta";
 import { lehenga_page1 } from "../Data/Women/LehengaCholi";
 import { ladies_kurta } from "../Data/Women/ladies_kurta"; 
