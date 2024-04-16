@@ -113,6 +113,9 @@ public class ProductServiceImplementation implements ProductService{
 		if(req.getQuantity()!=0) {
 			product.setQuantity(req.getQuantity());
 		}
+		if(req.getDescription()!=null) {
+			product.setDescription(req.getDescription());
+		}
 		
 		return productRepository.save(product);
 	}
@@ -132,7 +135,11 @@ public class ProductServiceImplementation implements ProductService{
 	@Override
 	public List<Product> findProductByCategory(String category) {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("category --- "+category);
+		
+		List<Product> products = productRepository.findByCategory(category);
+		
+		return products;
 	}
 
 	@Override
@@ -171,17 +178,23 @@ public class ProductServiceImplementation implements ProductService{
 	public List<Product> searchProduct(String query) {
 		// TODO Auto-generated method stub
 		List<Product> products=productRepository.searchProduct(query);
-		return null;
+		return products;
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return productRepository.findAll();
+	}
+
+	@Override
+	public List<Product> recentlyAddedProduct() {
+		// TODO Auto-generated method stub
+		return productRepository.findTop10ByOrderByCreatedAtDesc();
 	}
 
 	
 }
-
-
-//public Page<Product> getAllProduct(String category, List<String>color, List<String> sizes, 
-//		Integer minPrice, Integer maxPrice, Integer minDiscount, 
-//		String sort, String stock, Integer pageNumber, Integer pageSize);
-//
 
 
 
