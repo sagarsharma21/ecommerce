@@ -16,8 +16,9 @@ import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-//import { mens_kurta } from '../../../Data/Men/mens_kurta'
+import { mens_kurta } from '../../../Data/Men/mens_kurta'
 import  ProductCard  from './ProductCard';
+
 import { filters, singleFilter, sortOptions } from './FilterData'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -458,9 +459,9 @@ export default function Product() {
                       {/* {mens_kurta.map((item) => <ProductCard product={item} />)} */}
                       {/* //use Selector */}
                       {/* {Product.products && */}
-                        {customersProduct?.products?.content?.map((item) => (
-                          <ProductCard product={item} />
-                        ))}
+                      { customersProduct.products && customersProduct.products?.content?.map(
+                        (item)=> <ProductCard product={item}/> )}
+                        
                       {/* {product.products && mens_kurta.map((item) => <ProductCard product={item} />)}  */}
                     </div>
                   </div>

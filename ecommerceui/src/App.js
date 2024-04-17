@@ -16,6 +16,7 @@ import CustomerRoutes from './Routes/CustomerRoutes';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getUser } from './State/Auth/Action';
+import AdminRouters from './Routes/AdminRouters';
 
 function App() {
   const {auth} = useSelector((store) => store);
@@ -33,16 +34,17 @@ function App() {
     <div className="App">
 
       {/* Hello ecomm */}
-      <Navigation/>
+      {/* <Navigation/> */}
 
         <Routes>
-          <Route path='/*' element={<CustomerRoutes />} >
+          <Route path='/*' element={<CustomerRoutes />} ></Route>
 
-          </Route>
+          <Route path='/admin/*' element={<AdminRouters />}></Route>
+
         </Routes>
         
         <div>
-          <Footer/>
+          {/* <Footer/> */}
         </div>
         
       <div>
