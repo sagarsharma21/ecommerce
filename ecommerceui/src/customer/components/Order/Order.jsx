@@ -3,6 +3,7 @@ import { Box, Grid } from '@mui/material'
 import OrderCard from './OrderCard'
 import { useDispatch, useSelector } from 'react-redux';
 import { getOrderHistory } from "../../../State/Order/Action";
+import OrderDetails from './OrderDetails';
 
 
 
@@ -77,7 +78,7 @@ const Order = () => {
                 <div className='space-y-5'></div>
                 
             </Grid>
-            <orderDetails/>
+            <OrderDetails/>
         </Grid>
     </div>
   );

@@ -10,6 +10,7 @@ import { mensShoesPage1 } from "../Data/Shoes/Shoes";
 import { mens_kurta } from "../Data/Men/mens_kurta";
 import { lehenga_page1 } from "../Data/Women/LehengaCholi";
 import { ladies_kurta } from "../Data/Women/ladies_kurta"; 
+import ProductCard from "../customer/components/Product/ProductCard";
 
 const HomePage = () => {
 
@@ -25,7 +26,7 @@ const HomePage = () => {
             <HomeProductSection data={dressPage1} section={"Dress"} />
             <HomeProductSection data={gownsPage1} section={"Women's Gowns"} />
             <HomeProductSection data={ladies_kurta} section={"Women's Kurta"} />
-
+            <ProductCard />
         </div>
         
         </div>

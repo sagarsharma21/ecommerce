@@ -41,22 +41,22 @@ public class ProductServiceImplementation implements ProductService{
 	public Product createProduct(CreateProductRequest req) {
 		// TODO Auto-generated method stub
 		//Top level category
-		Category topLevel=categoryRepository.findByName(req.getTopLevelcategory());
+		Category topLevel=categoryRepository.findByName(req.getTopLevelCategory());
 		//<!--->
 		if(topLevel==null) {
 				Category topLevelCategory=new Category();
-				topLevelCategory.setName(req.getTopLevelcategory());
+				topLevelCategory.setName(req.getTopLevelCategory());
 				topLevelCategory.setLevel(1);
 				
 				topLevel = categoryRepository.save(topLevelCategory);
 			}
 		
 		//Second level category
-		Category secondLevel=categoryRepository.findByNameAndParent(req.getSecondLevelcategory(),topLevel.getName());
+		Category secondLevel=categoryRepository.findByNameAndParent(req.getSecondLevelCategory(),topLevel.getName());
 		//<!--->
 		if(secondLevel==null) {
 			Category secondLevelCategory=new Category();
-			secondLevelCategory.setName(req.getSecondLevelcategory());
+			secondLevelCategory.setName(req.getSecondLevelCategory());
 			secondLevelCategory.setParentCategory(topLevel);
 			secondLevelCategory.setLevel(2);
 			
@@ -89,9 +89,10 @@ public class ProductServiceImplementation implements ProductService{
 		product.setCategory(thirdLevel);
 		product.setCreatedAt(LocalDateTime.now());
 		
-		Product saveProduct=productRepository.save(product);
+		Product savedProduct=productRepository.save(product);
+		System.out.println("products - "+product);
 		
-		return saveProduct;
+		return savedProduct;
 	}
 
 	@Override

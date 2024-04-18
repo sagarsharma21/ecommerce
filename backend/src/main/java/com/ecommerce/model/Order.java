@@ -91,116 +91,158 @@ public class Order {
 
 
 
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public int getTotalItem() {
-		return totalItem;
-	}
-
-	public void setTotalItem(int totalItem) {
-		this.totalItem = totalItem;
-	}
-
-	public Integer getDiscounte() {
-		return discount;
-	}
-
-	public void setDiscount(Integer discount) {
-		this.discount = discount;
-	}
-
-	public Integer getTotalDiscountedPrice() {
-		return totalDiscountedPrice;
-	}
-
-	public void setTotalDiscountedPrice(Integer totalDiscountedPrice) {
-		this.totalDiscountedPrice = totalDiscountedPrice;
-	}
-
 	public Long getId() {
 		return id;
 	}
+
+
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
-	}
 
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public List<OrderItem> getOrderItems() {
-		return orderItems;
-	}
-
-	public void setOrderItems(List<OrderItem> orderItems) {
-		this.orderItems = orderItems;
-	}
-
-	public LocalDateTime getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(LocalDateTime orderDate) {
-		this.orderDate = orderDate;
-	}
-
-	public LocalDateTime getDeliveryDate() {
-		return deliveryDate;
-	}
-
-	public void setDeliveryDate(LocalDateTime deliveryDate) {
-		this.deliveryDate = deliveryDate;
-	}
-
-	public Address getShippingAddress() {
-		return shippingAddress;
-	}
-
-	public void setShippingAddress(Address shippingAddress) {
-		this.shippingAddress = shippingAddress;
-	}
-
-//	public PaymentDetails getPaymentDetails() {
-//		return paymentDetails;
-//	}
-
-//	public void setPaymentDetails(PaymentDetails paymentDetails) {
-//		this.paymentDetails = paymentDetails;
-//	}
-
-	public double getTotalPrice() {
-		return totalPrice;
-	}
-
-	public void setTotalPrice(double totalPrice) {
-		this.totalPrice = totalPrice;
-	}
-
-	public OrderStatus getOrderStatus() {
-		return orderStatus;
-	}
-
-	public void setOrderStatus(OrderStatus orderStatus) {
-		this.orderStatus = orderStatus;
-	}
 
 	public String getOrderId() {
 		return orderId;
 	}
 
+
+
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
+	}
+
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
+	public List<OrderItem> getOrderItems() {
+		return orderItems;
+	}
+
+
+
+	public void setOrderItems(List<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
+
+
+
+	public LocalDateTime getOrderDate() {
+		return orderDate;
+	}
+
+
+
+	public void setOrderDate(LocalDateTime orderDate) {
+		this.orderDate = orderDate;
+	}
+
+
+
+	public LocalDateTime getDeliveryDate() {
+		return deliveryDate;
+	}
+
+
+
+	public void setDeliveryDate(LocalDateTime deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
+
+
+
+	public Address getShippingAddress() {
+		return shippingAddress;
+	}
+
+
+
+	public void setShippingAddress(Address shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+
+
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+
+
+	public Integer getTotalDiscountedPrice() {
+		return totalDiscountedPrice;
+	}
+
+
+
+	public void setTotalDiscountedPrice(Integer totalDiscountedPrice) {
+		this.totalDiscountedPrice = totalDiscountedPrice;
+	}
+
+
+
+	public Integer getDiscount() {
+		return discount;
+	}
+
+
+
+	public void setDiscount(Integer discount) {
+		this.discount = discount;
+	}
+
+
+
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
+	}
+
+
+
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+
+
+	public int getTotalItem() {
+		return totalItem;
+	}
+
+
+
+	public void setTotalItem(int totalItem) {
+		this.totalItem = totalItem;
+	}
+
+
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
 	}
 
     // constructors, getters and setters

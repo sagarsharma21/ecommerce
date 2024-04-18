@@ -49,7 +49,7 @@ const DeliveryAddressForm = ({ handleNext }) => {
       <Grid container spacing={4}>
         
         <Grid xs={12} lg={5} className="border rounded-e-md shadow-md h-[30.5rem] overflow-y-scroll ">
-          {auth.user?.addresses.map((item) => (
+          {auth.user?.addresses?.map((item) => (
             <div
             onClick={() => setSelectedAddress(item)}
             className="p-5 py-7 border-b cursor-pointer"

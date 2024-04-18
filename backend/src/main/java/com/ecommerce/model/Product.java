@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -78,7 +79,7 @@ public class Product {
 	//All Args Constructor
 	public Product(Long id, String title, String description, int price, int discountedPrice, int discountPercent,
 			int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings,
-			List<Review> reviews, int numRatings, com.ecommerce.model.Category category, LocalDateTime createdAt) {
+			List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -210,11 +211,11 @@ public class Product {
 		this.numRatings = numRatings;
 	}
 
-	public com.ecommerce.model.Category getCategory() {
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(com.ecommerce.model.Category category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 
@@ -226,5 +227,28 @@ public class Product {
 		this.createdAt = createdAt;
 	}
 	
+	@Override
+	public int hashCode() {
+		
+		return Objects.hash(brand, category, color, description, discountPercent, discountedPrice, id, imageUrl,
+				numRatings, price, quantity, ratings, reviews, sizes, title);
+	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		return Objects.equals(brand, other.brand) && Objects.equals(category, other.category)
+				&& Objects.equals(color, other.color) && Objects.equals(description, other.description)
+				&& discountPercent == other.discountPercent && discountedPrice == other.discountedPrice
+				&& Objects.equals(id, other.id) && Objects.equals(imageUrl, other.imageUrl)
+				&& numRatings == other.numRatings && price == other.price && quantity == other.quantity
+				&& Objects.equals(ratings, other.ratings) && Objects.equals(reviews, other.reviews)
+				&& Objects.equals(sizes, other.sizes) && Objects.equals(title, other.title);
+	}
 }

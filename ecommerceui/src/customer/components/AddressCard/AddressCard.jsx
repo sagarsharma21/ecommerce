@@ -15,10 +15,14 @@ const AddressCard = ({ address }) => {
 
         <div className='space-y-3'>
           <p className='font-semibold'>{`${address?.firstName} ${address?.lastName}`}</p>
-          <p>{`${address?.streetAddress} ${address?.city} ${address?.state} ${address?.zipCode}`}</p>
+          {/* <p>{`${address?.streetAddress} ${address?.city} ${address?.state} ${address?.zipCode}`}</p> */}
+          <p className='font-serif from-stone-800'>{address?.streetAddress}</p> 
+          <p className='font-serif from-stone-800'>City- {address?.city}</p> 
+          <p className='font-serif from-stone-800'>State- {address?.state}</p>
+          <p className='font-serif from-stone-800'>PIN Code- {address?.zipCode}</p>
           <div className='space-y-3'>
             <p className='font-semibold'>Phone Number</p>
-            <p className=' '>{address?.mobile}</p>
+            <p className='font-serif from-stone-800'>{address?.mobile}</p>
           </div>
         </div>
       </div>

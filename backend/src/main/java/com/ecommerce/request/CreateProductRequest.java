@@ -26,9 +26,9 @@ public class CreateProductRequest {
 
 	private String imageUrl;
 
-	private String topLevelcategory;
-	private String firstLevelcategory;
-	private String secondLevelcategory;
+	private String topLevelCategory;
+	private String secondLevelCategory;
+	private String thirdLevelCategory;
 
 	public String getTitle() {
 		return title;
@@ -90,27 +90,24 @@ public class CreateProductRequest {
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
-	public String getTopLevelcategory() {
-		return topLevelcategory;
+	public String getTopLevelCategory() {
+		return topLevelCategory;
 	}
-	public void setTopLevelcategory(String topLevelcategory) {
-		this.topLevelcategory = topLevelcategory;
+	public void setTopLevelCategory(String topLevelCategory) {
+		this.topLevelCategory = topLevelCategory;
 	}
-	public String getSecondLevelcategory() {
-		return secondLevelcategory;
+	public String getSecondLevelCategory() {
+		return secondLevelCategory;
 	}
-	public void setSecondLevelcategory(String secondLevelcategory) {
-		this.secondLevelcategory = secondLevelcategory;
-	}
-	public String getFirstLevelcategory() {
-		return firstLevelcategory;
-	}
-	public void setFirstLevelcategory(String firstLevelcategory) {
-		this.firstLevelcategory = firstLevelcategory;
+	public void setSecondLevelCategory(String secondLevelCategory) {
+		this.secondLevelCategory = secondLevelCategory;
 	}
 	public String getThirdLevelCategory() {
-		// TODO Auto-generated method stub
-		return null;
+		return thirdLevelCategory;
 	}
+	public void setThirdLevelCategory(String thirdLevelCategory) {
+		this.thirdLevelCategory = thirdLevelCategory;
+	}
+	
 
 }

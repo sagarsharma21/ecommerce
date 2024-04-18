@@ -12,6 +12,7 @@ import { Home } from '@mui/icons-material'
 //import { ThemeProvider } from '@emotion/react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { customTheme, customerTheme } from '../Theme/customTheme'
+import ProductCard from '../customer/components/Product/ProductCard'
 
 const CustomerRoutes = () => {
   const location = useLocation();
@@ -25,7 +26,8 @@ const CustomerRoutes = () => {
             <Routes>
               <Route path='/login' element={<HomePage/>}></Route>
               <Route path='/register' element={<HomePage/>}></Route>
-              
+              {/* <Route path='/p' element={<ProductCard/>}></Route> */}
+
                 <Route path='/' element={<HomePage/>}></Route>
                 <Route path='/cart' element={<Cart/>}></Route>
                 <Route path='/:levelOne/:levelTwo/:levelThree' element={<Product/>}></Route>

@@ -182,8 +182,8 @@ public class OrderServiceImplementation implements OrderService {
 	@Override
 	public List<Order> getAllOrders() {
 		// TODO Auto-generated method stub
-		//return orderRepository.findAllOrdersByCreatedAtDesc();
-		return null;
+		
+		return orderRepository.findAllByOrderByCreatedAtDesc();
 	}
 
 	@Override

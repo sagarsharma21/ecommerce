@@ -9,12 +9,12 @@ import { getOrderById } from '../../../State/Order/Action'
 const OrderSummary = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  //get orderId from URL
   const location = useLocation();
-  
   const searchParams = new URLSearchParams(location.search);
   const orderId = searchParams.get("order_id");
-
-  const dispatch = useDispatch();
 
   const jwt = localStorage.getItem("jwt");
 
@@ -28,13 +28,13 @@ const OrderSummary = () => {
   
   const handleCreatePayment = () => {
     const data = {orderId: order.order?.id, jwt}
-    dispatch(createPayment(data))
+    //dispatch(createPayment(data))
   }
 
   return (
     <div className='space-y-5'>
-      {/* OrderSummary */}
-      <div className='p-5 shadow-lg rounded-s-md border'>
+      <span className='font-semibold'>Order Summary</span>
+      <div className='p-5 shadow-lg rounded-s-md border text-gray-700'>
         <AddressCard address={order.order?.shippingAddress} />
 
       </div>
@@ -69,7 +69,7 @@ const OrderSummary = () => {
             
               <div className='flex justify-between pt-3 text-green-600'>
                 <span>Delivery Charges</span>
-                <span className='text-green-600'>100</span>
+                <span className='text-green-600'>₹ 0</span>
               </div>
             
               <div className='flex justify-between pt-3  font-bold'>

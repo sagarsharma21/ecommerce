@@ -66,8 +66,8 @@ public class User {
 	
 	//All Args Constructor
 	public User(Long id, String firstName, String lastName, String password, String email, String role, String mobile,
-			List<Address> address,
-			LocalDateTime createdAt) {
+			List<Address> address, List<PaymentInformation> paymentInformation, List<Rating> ratings,
+			List<Review> reviews, LocalDateTime createdAt) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -76,13 +76,17 @@ public class User {
 		this.email = email;
 		this.role = role;
 		this.mobile = mobile;
+		this.address = address;
+		this.paymentInformation = paymentInformation;
+		this.ratings = ratings;
+		this.reviews = reviews;
 		this.createdAt = createdAt;
 	}
 
 	public Long getId() {
 		return id;
 	}
-
+	
 	public void setId(Long id) {
 		this.id = id;
 	}

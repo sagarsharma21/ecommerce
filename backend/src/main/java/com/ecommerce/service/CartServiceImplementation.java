@@ -29,7 +29,8 @@ public class CartServiceImplementation implements CartService{
 		// TODO Auto-generated method stub
 		Cart cart=new Cart();
 		cart.setUser(user);
-		return cartRepository.save(cart);
+		Cart createdCart=cartRepository.save(cart);
+		return createdCart;
 	}
 
 	@Override

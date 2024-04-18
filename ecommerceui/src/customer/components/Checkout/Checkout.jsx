@@ -15,11 +15,13 @@ export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(1);
   const [skipped, setSkipped] = React.useState(new Set());
 
+  const location = useLocation()
+  const navigate = useNavigate();
+
 const querySearch = new URLSearchParams(location.search)
 
 const step = querySearch.get("step"); 
-const location = useLocation()
-const navigate = useNavigate();
+
  
 console.log("step " ,step);
 
@@ -67,7 +69,7 @@ console.log("step " ,step);
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
           
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button

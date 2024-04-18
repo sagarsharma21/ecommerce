@@ -88,6 +88,7 @@ const product = {
   details:
     'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 };
+
 const reviews = { href: "#", average: 4, totalCount: 117 };
 
 function classNames(...classes) {
@@ -99,16 +100,16 @@ export default function ProductDetails() {
   // const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
   
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedSize, setSelectedSize] = useState();
+  const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
   const [activeImage, setActiveImage] = useState(null);
   
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const params=useParams();
   const { customersProduct } = useSelector((store) => store);
   const { productId } = useParams();
   const jwt = localStorage.getItem("jwt");
-  // console.log("param " ,productId, customersProduct.product);
+    console.log("param -productId -product", productId, customersProduct.product);
 
   const handleSetActiveImage = (image) => {
     setActiveImage(image);
@@ -118,18 +119,28 @@ export default function ProductDetails() {
     const data = {productId, size: selectedSize.name};
     dispatch(addItemToCart({ data, jwt }));
     navigate("/cart");
-  }
+  };
 
+  //add items to cart 
   const handleAddToCart=()=>{
-    navigate('/cart')}
+    const data = {productId, size: selectedSize.name }
+      console.log("data -", data);
+    dispatch(addItemToCart(data))
+    navigate('/cart')
+  };
 
+  // useEffect(() => {
+    
+  //   const data = { productId: Number(productId), jwt };
+  //   dispatch(findProductsById(data));
+  //   dispatch(getAllReviews(productId));
+  // }, [productId]);
   useEffect(() => {
     
-    const data = { productId: Number(productId), jwt };
-    dispatch(findProductsById(data));
+    //const data = { productId: Number(productId), jwt };
+    dispatch(findProductsById(params.productId));
     dispatch(getAllReviews(productId));
-  }, [productId])
-  
+  }, [params.productId]);
 
   
   return (
@@ -177,11 +188,11 @@ export default function ProductDetails() {
         {/* Product details */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-10 px-4 pt-10">
           {/* Image gallery */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">            
             <div className="overflow-hidden rounded-lg max-w-[30rem] max-h-[35rem]">
               <img
-                // src={product.images[0].src}
-                src={activeImage?.src || customersProduct.product?.imageUrl}
+                //  src={activeImage?.src || item?.product?.imageUrl }
+                    src={activeImage?.src || customersProduct.products?.imageUrl}
                 alt={product.images[0].alt}
                 className="h-full w-full object-cover object-center"
               />
@@ -219,10 +230,11 @@ export default function ProductDetails() {
           <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24 lg:pt-8">
             <div className="lg:col-span-2 ">
               <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
-                {customersProduct.product?.brand}
+                {" "}
+                {customersProduct.products?.brand}
               </h1>
               <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
-                {customersProduct.product?.title}
+                {customersProduct.products?.title}
               </h1>
             </div>
 
@@ -231,9 +243,9 @@ export default function ProductDetails() {
               <h2 className="sr-only">Product information</h2>
 
               <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900 mt-6">
-                <p className="font-semibold">₹{customersProduct.product?.discountedPrice}</p>
-                <p className="opacity-50 line-through">₹{customersProduct.product?.price}</p>
-                <p className="text-green-600 font-semibold">{customersProduct.product?.discountPercent}% off</p>
+                <p className="font-semibold">₹11{customersProduct?.products?.discountedPrice}</p>
+                <p className="opacity-50 line-through">₹{customersProduct.products?.price}</p>
+                <p className="text-green-600 font-semibold">{customersProduct.product?.discountPercent}% Off</p>
               </div>
 
               {/* Reviews */}
@@ -246,7 +258,7 @@ export default function ProductDetails() {
                     readOnly 
                   />
 
-                  <p className="opacity-50 text-sm">5460 Ratings</p>
+                  <p className="opacity-50 text-sm">546 Ratings</p>
                   <p
                     className="ml-3 text-sm font-medium text-indigo-600 
                  hover:text-indigo-500"
