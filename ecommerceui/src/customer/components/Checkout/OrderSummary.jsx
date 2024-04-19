@@ -5,6 +5,7 @@ import { Button, } from '@mui/material'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getOrderById } from '../../../State/Order/Action'
+import { createPayment } from '../../../State/Payment/Action'
 
 const OrderSummary = () => {
 
@@ -26,9 +27,14 @@ const OrderSummary = () => {
       dispatch(getOrderById(orderId))
   }, [orderId]);
   
-  const handleCreatePayment = () => {
-    const data = {orderId: order.order?.id, jwt}
-    //dispatch(createPayment(data))
+  // const handleCreatePayment = () => {
+  //   const data = {orderId: order.order?.id, jwt}
+  //   dispatch(createPayment(data))
+  // }
+
+  const handleCheckout= () => {
+    dispatch(createPayment(orderId));
+
   }
 
   return (
@@ -79,7 +85,7 @@ const OrderSummary = () => {
             </div>
                  
                   <Button
-                    onClick={handleCreatePayment}
+                    onClick={handleCheckout} //handleCreatePayment
                     variant="contained" className='w-full mt-5'
                     sx={{ px: "2.5rem", py: "0.7rem", bgcolor: "#9155fd" }}>
                     Checkout

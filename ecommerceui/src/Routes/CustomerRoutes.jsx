@@ -9,19 +9,22 @@ import Checkout from '../customer/components/Checkout/Checkout'
 import OrderDetails from '../customer/components/Order/OrderDetails'
 import Order from "../customer/components/Order/Order"  
 import { Home } from '@mui/icons-material'
-//import { ThemeProvider } from '@emotion/react';
+import Navigation from '../customer/components/Navigation/Navigation'
+import Footer from '../customer/components/Footer/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { customTheme, customerTheme } from '../Theme/customTheme'
 import ProductCard from '../customer/components/Product/ProductCard'
+import PaymentSuccess from '../customer/components/Payment/PaymentSuccess'
 
 const CustomerRoutes = () => {
   const location = useLocation();
 
-  // const showNavigation = location.pathname ! == "*";
+   const showNavigation = location.pathname !== "*";
 
   return (
     <div>{/* CustomerRoutes */}
       <ThemeProvider theme={customerTheme}>
+        {showNavigation && <Navigation />}
         <div>
             <Routes>
               <Route path='/login' element={<HomePage/>}></Route>
@@ -36,6 +39,7 @@ const CustomerRoutes = () => {
                 
                 <Route path="/account/order" element={<Order />}></Route>
                 <Route path="/account/order/:orderId" element={<OrderDetails />}></Route>
+                <Route path="/payment/:orderId" element={<PaymentSuccess />}></Route>
 
                  {/* <HomePage/> */}
         {/* Instead we are rendering Product Page for development */}
@@ -50,6 +54,7 @@ const CustomerRoutes = () => {
         {/* <OrderDetails/> */}
 
             </Routes>
+            <Footer />
         </div>
       </ThemeProvider> 
     </div>

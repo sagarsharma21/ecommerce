@@ -10,6 +10,7 @@ import com.ecommerce.user.domain.OrderStatus;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -43,8 +44,8 @@ public class Order {
     @OneToOne
     private Address shippingAddress;
 
-    //@Embedded
-    //private PaymentDetails paymentDetails=new PaymentDetails();
+    @Embedded
+    private PaymentDetails paymentDetails=new PaymentDetails();
 
     private double totalPrice;
     
@@ -63,13 +64,13 @@ public class Order {
 	}
     
     
-
+    // constructors, getters and setters
 	public Order(Long id, String orderId, User user, List<OrderItem> orderItems, LocalDateTime orderDate,
 			LocalDateTime deliveryDate, Address shippingAddress, 
-			//PaymentDetails paymentDetails,
+			PaymentDetails paymentDetails,
 			double totalPrice,
 			Integer totalDiscountedPrice, Integer discount, 
-			//com.ecommerce.model.OrderStatus orderStatus, 
+			OrderStatus orderStatus, 
 			int totalItem,
 			LocalDateTime createdAt) {
 		super();
@@ -80,7 +81,7 @@ public class Order {
 		this.orderDate = orderDate;
 		this.deliveryDate = deliveryDate;
 		this.shippingAddress = shippingAddress;
-		//this.paymentDetails = paymentDetails;
+		this.paymentDetails = paymentDetails;
 		this.totalPrice = totalPrice;
 		this.totalDiscountedPrice = totalDiscountedPrice;
 		this.discount = discount;
@@ -244,8 +245,18 @@ public class Order {
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
+  
+	
+	
+	public PaymentDetails getPaymentDetails() {
+		return paymentDetails;
+	}
+	
+	
+	
+	public void setPaymentDetails(PaymentDetails paymentDetails) {
+		this.paymentDetails = paymentDetails;
+	}
+	
 
-    // constructors, getters and setters
-    
-    
 }
