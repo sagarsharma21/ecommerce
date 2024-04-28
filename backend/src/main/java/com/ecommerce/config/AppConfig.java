@@ -20,10 +20,10 @@ import jakarta.servlet.http.HttpServletRequest;
 public class AppConfig {
 	
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+	 SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 		
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-		.authorizeHttpRequests(Authorize->Authorize.requestMatchers("/api/**").authenticated().anyRequest().permitAll())
+		.authorizeHttpRequests(Authorize -> Authorize.requestMatchers("/api/**").authenticated().anyRequest().permitAll())
 		.addFilterBefore(new JwtValidator(), BasicAuthenticationFilter.class)
 		.csrf().disable()
 		.cors().configurationSource(new CorsConfigurationSource() {
@@ -35,7 +35,8 @@ public class AppConfig {
 				CorsConfiguration cfg = new CorsConfiguration();
 				cfg.setAllowedOrigins(Arrays.asList(
 						"http://localhost:3000",
-						"http://localhost:4200"
+						"http://localhost:4200",
+						"http://localhost:5555"
 						));
 				cfg.setAllowedMethods(Collections.singletonList("*"));
 				cfg.setAllowCredentials(true);

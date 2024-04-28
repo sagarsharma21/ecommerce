@@ -12,7 +12,6 @@ import {
 } from "./ActionType";
 
 import  {api, API_BASE_URL } from "../../config/apiConfig";
-import { type } from "@testing-library/user-event/dist/type";
 
 export const createOrder = (reqData) => async (dispatch) => {
   console.log("req data ", reqData);
@@ -52,8 +51,9 @@ export const createOrder = (reqData) => async (dispatch) => {
 
 export const getOrderById = (orderId) => async (dispatch) => {
   console.log("get order req ", orderId);
+  
+  dispatch({ type: GET_ORDER_BY_ID_REQUEST });
   try {
-    dispatch({ type: GET_ORDER_BY_ID_REQUEST });
 
     const { data } = await api.get(
       `/api/orders/${orderId}`,
@@ -76,8 +76,10 @@ export const getOrderById = (orderId) => async (dispatch) => {
 };
 
 export const getOrderHistory = (reqData) => async (dispatch, getState) => {
+  
+  
+  dispatch({ type: GET_ORDER_HISTORY_REQUEST });
   try {
-    dispatch({ type: GET_ORDER_HISTORY_REQUEST });
 
     const config ={
       headers: {

@@ -19,7 +19,7 @@ const TrophyImg = styled('img')({
   position: 'absolute'
 });
 
-const Achivement = () => {
+const Achievement = () => {
   return (
     <div>
       <Card  className=''sx={{ position: 'relative' ,bgcolor:'black',color:"white"}}>
@@ -41,4 +41,4 @@ const Achivement = () => {
   );
 };
 
-export default Achivement;
+export default Achievement;

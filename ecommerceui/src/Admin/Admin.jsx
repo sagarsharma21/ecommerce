@@ -21,7 +21,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Dashboard } from "@mui/icons-material";
 import DashBoard from "./components/DashBoard";
 import CreateProductForm from "./components/CreateProductForm";
-import Productstable from "./components/Productstable";
+import ProductsTable from "./components/ProductsTable";
 import OrdersTable from "./components/OrdersTable";
 import CustomersTable from "./components/CustomersTable";
 import AdminDashBoard from "./components/DashBoard";
@@ -88,29 +88,27 @@ const Admin = () => {
   );
 
   return (
-    <div>
-         {/* flex h-full */}
-      <div className=' flex h-[100vh]  '>  
-        <CssBaseline />
+      <div>
+          {/* flex h-full */}
+        <div className='relative flex h-[100vh]  '>  
+          <CssBaseline />
 
-        <div className='w-[15%] border border-r-gray-300 h-full'>
-          
-       
-          {drawer}
+          <div className='w-[15%] border border-r-gray-300 h-full fixed top-0'>
+            {drawer}
           </div>
-        <div className='w-[85%] '>
-            <Routes>
-            <Route path='/' element={ <AdminDashBoard/>}></Route>
-            <Route path='/product/create' element={<CreateProductForm/>}></Route>
-            <Route path='/products' element={<Productstable/>}></Route>
-            <Route path='/orders' element={<OrdersTable/>}></Route>
-            <Route path='/customers' element={<CustomersTable/>}></Route>
+          <div className='w-[85%] h-full ml-[15%]'>
+              <Routes>
+              <Route path='/' element={ <AdminDashBoard/>}></Route>
+              <Route path='/product/create' element={<CreateProductForm/>}></Route>
+              <Route path='/products' element={<ProductsTable/>}></Route>
+              <Route path='/orders' element={<OrdersTable/>}></Route>
+              <Route path='/customers' element={<CustomersTable/>}></Route>
 
-            </Routes>
+              </Routes>
+          </div>
+          
         </div>
-        
       </div>
-    </div>
   );
 };
 

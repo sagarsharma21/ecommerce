@@ -33,7 +33,7 @@ public class PaymentController {
 	@Value("${razorpay.api.key}")
 	String apiKey;
 	
-	@Value("${razorpay.api.id}")
+	@Value("${razorpay.api.secret}")
 	String apiSecret;
 	
 	@Autowired
@@ -53,24 +53,28 @@ public class PaymentController {
 		try {
 			RazorpayClient razorpay = new RazorpayClient(apiKey, apiSecret);
 			
+			// Create a JSON object with the payment link request parameters
 			JSONObject paymentLinkRequest = new JSONObject();
-			
 			paymentLinkRequest.put("amount", order.getTotalPrice()*100);
 			paymentLinkRequest.put("currency" ,"INR");
 			
+			// Create a JSON object with the user information
 			JSONObject userInformation = new JSONObject();
 			userInformation.put("name", order.getUser().getFirstName());
 			userInformation.put("email" ,order.getUser().getEmail());
 			paymentLinkRequest.put("userInformation", userInformation);
 			
+			// Create a JSON object with the notification settings
 			JSONObject notify = new JSONObject();
 			notify.put("sms", true);
 			notify.put("email", true);
 			paymentLinkRequest.put("notify", notify);
 			
-			//url to redirect user after successful payment
+			// Set the callback URL to redirect user after successful payment
 			paymentLinkRequest.put("callback_url", "http://localhost:3000/payment/"+orderId);
-			
+			paymentLinkRequest.put("callback_method", "get");
+
+			// Create the payment link using the PaymentLink.create() method
 			PaymentLink paymentLink = razorpay.paymentLink.create(paymentLinkRequest);
 			
 			String paymentLinkId = paymentLink.get("id");
@@ -80,6 +84,8 @@ public class PaymentController {
 			res.setPayment_link_url(paymentLinkUrl);
 			res.setPayment_link_id(paymentLinkId);
 			
+			// Print
+
 			return new ResponseEntity<PaymentLinkResponse>(res, HttpStatus.CREATED);
 			
 		} catch (Exception e) {

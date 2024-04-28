@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { Avatar, Button, TableCell, TableContainer, TableHead, TableRow, colors } from '@mui/material';
+import { Avatar, Button, Card, CardHeader, TableCell, TableContainer, TableHead, TableRow,Paper, Table, TableBody} from '@mui/material';
 import { Category } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteProduct, findProducts } from '../../State/Product/Action';
-
+//import { Card} from '@mui/material'; 
 
 const ProductsTable = () => {
 
@@ -65,7 +65,7 @@ const ProductsTable = () => {
                   </TableCell>
                   <TableCell>
                     {item.id}{item.title} 
-                  </TableCell>
+                  </TableCell> 
 
                   <TableCell align='left'>{item.category.name} </TableCell>
                   <TableCell align='left'>{item.price} </TableCell>

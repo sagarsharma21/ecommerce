@@ -28,14 +28,17 @@ const OrderSummary = () => {
   }, [orderId]);
   
   // const handleCreatePayment = () => {
-  //   const data = {orderId: order.order?.id, jwt}
-  //   dispatch(createPayment(data))
+  //   const data = {orderId: order.order?.id, jwt};
+  //   dispatch(createPayment(data));
   // }
+	
+	const handleCreatePayment = () => {
+		dispatch(createPayment(orderId))
+	}
+  // const handleCheckout= () => {
+  //   dispatch(createPayment(orderId));
 
-  const handleCheckout= () => {
-    dispatch(createPayment(orderId));
-
-  }
+  // }
 
   return (
     <div className='space-y-5'>
@@ -85,7 +88,7 @@ const OrderSummary = () => {
             </div>
                  
                   <Button
-                    onClick={handleCheckout} //handleCreatePayment
+                    onClick={handleCreatePayment} //handleCreatePayment
                     variant="contained" className='w-full mt-5'
                     sx={{ px: "2.5rem", py: "0.7rem", bgcolor: "#9155fd" }}>
                     Checkout
