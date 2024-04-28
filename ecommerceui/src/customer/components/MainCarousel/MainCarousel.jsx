@@ -36,8 +36,8 @@ const MainCarousel = () => {
         <AliceCarousel
         
         items={item}
-        autoPlay={false}
-        autoPlayInterval={2000}
+        autoPlay={true}
+        autoPlayInterval={2500}
         infinite
         disableButtonsControls
         // mouseTracking

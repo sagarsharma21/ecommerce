@@ -33,7 +33,8 @@ const OrderSummary = () => {
   // }
 	
 	const handleCreatePayment = () => {
-		dispatch(createPayment(orderId))
+		dispatch(createPayment({orderId, jwt, navigate }));
+    console.log("called dispatch createPayment from Ordersummary.jsx");
 	}
   // const handleCheckout= () => {
   //   dispatch(createPayment(orderId));

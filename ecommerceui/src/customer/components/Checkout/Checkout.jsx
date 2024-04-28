@@ -20,10 +20,10 @@ export default function Checkout() {
 
 const querySearch = new URLSearchParams(location.search)
 
-const step = querySearch.get("step"); 
+const step = parseInt(querySearch.get("step")); 
 
  
-console.log("step " ,step);
+console.log("step ", step);
 
   const handleNext = () => {
    let newSkipped = skipped;

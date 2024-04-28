@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,7 @@ import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 @RequestMapping("/api")
 public class PaymentController {
 
@@ -48,7 +50,7 @@ public class PaymentController {
 	@PostMapping("/payments/{orderId}")
 	public ResponseEntity<PaymentLinkResponse> createPaymentLink(@PathVariable Long orderId, @RequestHeader("Authorization") String jwt) throws OrderException, RazorpayException {
 		
-		Order order=orderService.findOrderById(orderId);
+		Order order=orderService.findOrderById(orderId); System.out.println("inside try method");
 		
 		try {
 			RazorpayClient razorpay = new RazorpayClient(apiKey, apiSecret);
@@ -104,6 +106,8 @@ public class PaymentController {
 		
 		RazorpayClient razorpayClient = new RazorpayClient(apiKey, apiSecret);
 		
+		System.out.println("payment id-"+paymentId+" order id-"+orderId);
+
 		try {
 			Payment payment = razorpayClient.payments.fetch(paymentId);
 

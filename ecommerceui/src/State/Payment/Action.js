@@ -2,19 +2,19 @@ import { api , API_BASE_URL } from "../../config/apiConfig"; import axios from '
 import { CREATE_PAYMENT_REQUEST, CREATE_PAYMENT_SUCCESS, CREATE_PAYMENT_FAILURE, UPDATE_PAYMENT_REQUEST, UPDATE_PAYMENT_SUCCESS, UPDATE_PAYMENT_FAILURE } from "./ActionType"
 
     
-  export const createPayment = (orderId) => async (dispatch) => {
-    console.log("create payment orderId - ", orderId);
-
+  export const createPayment = (reqData) => async (dispatch) => {
+    console.log("create payment orderId - ", reqData.orderId);
+    console.log("jwt tokenn ", reqData.jwt);
     dispatch({ type: CREATE_PAYMENT_REQUEST });
     try {
-        // const config = {
-        //     headers:{
-        //         "Content-Type":"application/json",
-        //         "Authorization":`Bearer ${jwt}`
-        //     }
-        // }
+        const config = {
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":`Bearer ${reqData.jwt}`
+            }
+        }
         //POST method ,so send body too
-        const { data } = await api.post(`/api/payments/${orderId}`, {} );
+        const { data } = await api.post(`/api/payments/${reqData.orderId}`, reqData, config );
 
         if (data.payment_link_url) {
             window.location.href = data.payment_link_url;

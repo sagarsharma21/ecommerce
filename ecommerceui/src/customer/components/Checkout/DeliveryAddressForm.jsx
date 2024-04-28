@@ -17,7 +17,7 @@ const DeliveryAddressForm = ({ handleNext }) => {
 
   console.log("auth", auth);
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) =>{  console.log("handleSubmit called");
     e.preventDefault(); //prevent default behaviour, i.e, page refresh
     
     const data= new FormData(e.currentTarget);
@@ -33,12 +33,13 @@ const DeliveryAddressForm = ({ handleNext }) => {
     };
 
     console.log("address", address);
-
+    console.log("handlesubmit called 1st fn");
     dispatch(createOrder({ address, jwt, navigate }));
     handleNext();
   };
 
     const handleCreateOrder = (item) => {
+          console.log("handleCreateOrder called -", jwt)
       dispatch(createOrder({ address:item, jwt, navigate }));
       handleNext();
     };
@@ -48,7 +49,7 @@ const DeliveryAddressForm = ({ handleNext }) => {
       {/* DeliveryAddressForm!! */}
       <Grid container spacing={4}>
         
-        <Grid xs={12} lg={5} className="border rounded-e-md shadow-md h-[30.5rem] overflow-y-scroll ">
+        <Grid item xs={12} lg={5} className="border rounded-e-md shadow-md h-[30.5rem] overflow-y-scroll ">
           {auth.user?.addresses?.map((item) => (
             <div
             onClick={() => setSelectedAddress(item)}
