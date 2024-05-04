@@ -74,8 +74,8 @@ const OrdersTable = () => {
   };
 
   return (
-    <div className="p-10">
-      OrderTable
+    <div className="p-5">
+      Order Table View
       <Card className="mt-2 bg-[#1b1b1b]" sx={{}}>
         <CardHeader title="Recent Orders" />
 

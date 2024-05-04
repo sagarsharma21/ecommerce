@@ -68,7 +68,7 @@ const jwt=localStorage.getItem("jwt")
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createProduct({productData,jwt})) //dispatch(createProduct({data:productData,jwt}))
-    console.log(productData);
+    console.log("created product data-", productData);
   };
 
 
@@ -158,7 +158,7 @@ const jwt=localStorage.getItem("jwt")
             <TextField
               fullWidth
               label="Discount Percentage"
-              name="discountPersent"
+              name="discountPercent"
               value={productData.discountPercent}
               onChange={handleChange}
               type="number"
@@ -168,7 +168,7 @@ const jwt=localStorage.getItem("jwt")
             <FormControl fullWidth>
               <InputLabel>Top Level Category</InputLabel>
               <Select
-                name="topLavelCategory"
+                name="topLevelCategory"
                 value={productData.topLevelCategory}
                 onChange={handleChange}
                 label="Top Level Category"
@@ -205,7 +205,8 @@ const jwt=localStorage.getItem("jwt")
               >
                 <MenuItem value="top">Tops</MenuItem>
                 <MenuItem value="women_dress">Dresses</MenuItem>
-                <MenuItem value="t-shirts">T-Shirts</MenuItem>
+                <MenuItem value="t-shirt">T-Shirts</MenuItem>
+                <MenuItem value="shirt">Shirts</MenuItem>
                 <MenuItem value="saree">Saree</MenuItem>
                 <MenuItem value="lehenga_choli">Lehenga Choli</MenuItem>
                 <MenuItem value="mens_kurta">Mens Kurta</MenuItem>

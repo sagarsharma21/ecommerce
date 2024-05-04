@@ -4,7 +4,7 @@ export const mensShoesPage1=[
         "brand": "Abros",
         "title": "ASSG1015N Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,455",
+        "discountedPrice": "₹1,455",
         "price": "₹1,599",
         "discountPercent": "9% off",
         "size": ""
@@ -14,7 +14,7 @@ export const mensShoesPage1=[
         "brand": "asian",
         "title": "Oxygen-05 Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,117",
+        "discountedPrice": "₹1,117",
         "price": "₹1,999",
         "discountPercent": "44% off",
         "size": ""
@@ -24,7 +24,7 @@ export const mensShoesPage1=[
         "brand": "BIRDE",
         "title": "Combo Pack of 2 Sports Shoes For Men",
         "color": "",
-        "selling_price": "₹499",
+        "discountedPrice": "₹499",
         "price": "₹998",
         "discountPercent": "50% off",
         "size": ""
@@ -34,7 +34,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Sports Running Running Shoes For Men",
         "color": "",
-        "selling_price": "₹299",
+        "discountedPrice": "₹299",
         "price": "₹1,299",
         "discountPercent": "76% off",
         "size": ""
@@ -44,7 +44,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Sports shoes for men | Latest Stylish Casual for men |r...",
         "color": "",
-        "selling_price": "₹249",
+        "discountedPrice": "₹249",
         "price": "₹1,299",
         "discountPercent": "80% off",
         "size": ""
@@ -54,7 +54,7 @@ export const mensShoesPage1=[
         "brand": "aadi",
         "title": "Mesh |Lightweight|Comfort|Summer|Trendy|Walking|Outdoor...",
         "color": "",
-        "selling_price": "₹199",
+        "discountedPrice": "₹199",
         "price": "₹999",
         "discountPercent": "80% off",
         "size": ""
@@ -64,7 +64,7 @@ export const mensShoesPage1=[
         "brand": "BIRDE",
         "title": "Trendy Sport Shoes For Men Pack Of 2",
         "color": "",
-        "selling_price": "₹499",
+        "discountedPrice": "₹499",
         "price": "₹1,498",
         "discountPercent": "66% off",
         "size": ""
@@ -74,7 +74,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Sports Running Running Shoes For Men",
         "color": "",
-        "selling_price": "₹249",
+        "discountedPrice": "₹249",
         "price": "₹1,299",
         "discountPercent": "80% off",
         "size": ""
@@ -84,7 +84,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "MIKE (N) Running Shoes For Men",
         "color": "",
-        "selling_price": "₹949",
+        "discountedPrice": "₹949",
         "price": "₹1,699",
         "discountPercent": "44% off",
         "size": ""
@@ -94,7 +94,7 @@ export const mensShoesPage1=[
         "brand": "World Wear Footwear",
         "title": "Affordable Range of Stylish Casual Walking Comfortable ...",
         "color": "",
-        "selling_price": "₹249",
+        "discountedPrice": "₹249",
         "price": "₹998",
         "discountPercent": "75% off",
         "size": ""
@@ -104,7 +104,7 @@ export const mensShoesPage1=[
         "brand": "JQR",
         "title": "EAST COOLSENSE lightweight, trenndy stylish,strechable,...",
         "color": "",
-        "selling_price": "₹811",
+        "discountedPrice": "₹811",
         "price": "₹1,249",
         "discountPercent": "35% off",
         "size": ""
@@ -114,7 +114,7 @@ export const mensShoesPage1=[
         "brand": "NIVIA",
         "title": "Super Court 2.0 Badminton Shoes For Men",
         "color": "",
-        "selling_price": "₹1,047",
+        "discountedPrice": "₹1,047",
         "price": "₹1,999",
         "discountPercent": "47% off",
         "size": ""
@@ -124,7 +124,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Sports Running Running Shoes For Men",
         "color": "",
-        "selling_price": "₹249",
+        "discountedPrice": "₹249",
         "price": "₹1,299",
         "discountPercent": "80% off",
         "size": ""
@@ -134,7 +134,7 @@ export const mensShoesPage1=[
         "brand": "BIRDE",
         "title": "Stylish Comfortable Lightweight, Breathable Black",
         "color": "",
-        "selling_price": "₹299",
+        "discountedPrice": "₹299",
         "price": "₹999",
         "discountPercent": "70% off",
         "size": ""
@@ -144,7 +144,7 @@ export const mensShoesPage1=[
         "brand": "asian",
         "title": "Future-01 running shoes For Men",
         "color": "",
-        "selling_price": "₹514",
+        "discountedPrice": "₹514",
         "price": "₹999",
         "discountPercent": "48% off",
         "size": ""
@@ -154,7 +154,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "STREET-RUN Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,329",
+        "discountedPrice": "₹1,329",
         "price": "₹1,799",
         "discountPercent": "26% off",
         "size": ""
@@ -164,7 +164,7 @@ export const mensShoesPage1=[
         "brand": "NIVIA",
         "title": "Badminton Shoes For Men",
         "color": "",
-        "selling_price": "₹896",
+        "discountedPrice": "₹896",
         "price": "₹1,120",
         "discountPercent": "20% off",
         "size": ""
@@ -174,7 +174,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "ComboPack of-2 | Sports shoes for men | walking, gym",
         "color": "",
-        "selling_price": "₹499",
+        "discountedPrice": "₹499",
         "price": "₹2,499",
         "discountPercent": "80% off",
         "size": ""
@@ -184,7 +184,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "HURRICANE Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,054",
+        "discountedPrice": "₹1,054",
         "price": "₹1,299",
         "discountPercent": "18% off",
         "size": ""
@@ -194,7 +194,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Sports Running Running Shoes For Men",
         "color": "",
-        "selling_price": "₹299",
+        "discountedPrice": "₹299",
         "price": "₹1,299",
         "discountPercent": "76% off",
         "size": ""
@@ -204,7 +204,7 @@ export const mensShoesPage1=[
         "brand": "SFR",
         "title": "FAST Trenddy Tainer Lace-ups Sporty Casuals",
         "color": "",
-        "selling_price": "₹489",
+        "discountedPrice": "₹489",
         "price": "₹1,699",
         "discountPercent": "71% off",
         "size": ""
@@ -214,7 +214,7 @@ export const mensShoesPage1=[
         "brand": "asian",
         "title": "Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,099",
+        "discountedPrice": "₹1,099",
         "price": "₹1,999",
         "discountPercent": "45% off",
         "size": ""
@@ -224,7 +224,7 @@ export const mensShoesPage1=[
         "brand": "density",
         "title": "COSCO Training & Gym Shoes For Men",
         "color": "",
-        "selling_price": "₹399",
+        "discountedPrice": "₹399",
         "price": "₹999",
         "discountPercent": "60% off",
         "size": ""
@@ -234,7 +234,7 @@ export const mensShoesPage1=[
         "brand": "BERSACHE",
         "title": "Bersache Sports Shoes For Men|Red For Walking",
         "color": "",
-        "selling_price": "₹649",
+        "discountedPrice": "₹649",
         "price": "₹3,842",
         "discountPercent": "83% off",
         "size": ""
@@ -244,7 +244,7 @@ export const mensShoesPage1=[
         "brand": "ASE",
         "title": "Durable Performance Cricket Shoes with Dual Closure",
         "color": "",
-        "selling_price": "₹939",
+        "discountedPrice": "₹939",
         "price": "₹2,250",
         "discountPercent": "58% off",
         "size": ""
@@ -254,7 +254,7 @@ export const mensShoesPage1=[
         "brand": "AIRDRON",
         "title": "Oxygen Running Shoes For Men",
         "color": "",
-        "selling_price": "₹494",
+        "discountedPrice": "₹494",
         "price": "₹1,499",
         "discountPercent": "67% off",
         "size": ""
@@ -264,7 +264,7 @@ export const mensShoesPage1=[
         "brand": "asian",
         "title": "Chrome-01 White Sports,Casual,Walking,Stylish",
         "color": "",
-        "selling_price": "₹1,299",
+        "discountedPrice": "₹1,299",
         "price": "₹2,299",
         "discountPercent": "43% off",
         "size": ""
@@ -274,7 +274,7 @@ export const mensShoesPage1=[
         "brand": "NIVIA",
         "title": "Ace Walking Shoes For Men",
         "color": "",
-        "selling_price": "₹1,199",
+        "discountedPrice": "₹1,199",
         "price": "₹2,399",
         "discountPercent": "50% off",
         "size": ""
@@ -284,7 +284,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Running Shoes Running Shoes For Men",
         "color": "",
-        "selling_price": "₹349",
+        "discountedPrice": "₹349",
         "price": "₹1,299",
         "discountPercent": "73% off",
         "size": ""
@@ -294,7 +294,7 @@ export const mensShoesPage1=[
         "brand": "KILLER",
         "title": "22509-T. Blue Phylon Running Shoes For Men",
         "color": "",
-        "selling_price": "₹976",
+        "discountedPrice": "₹976",
         "price": "₹2,499",
         "discountPercent": "60% off",
         "size": ""
@@ -304,7 +304,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "NORTH PLUS Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,299",
+        "discountedPrice": "₹1,299",
         "price": "₹1,699",
         "discountPercent": "23% off",
         "size": ""
@@ -314,7 +314,7 @@ export const mensShoesPage1=[
         "brand": "BIRDE",
         "title": "Premium Navy Sports Shoes For Men Walking Shoes For Men",
         "color": "",
-        "selling_price": "₹715",
+        "discountedPrice": "₹715",
         "price": "₹1,999",
         "discountPercent": "64% off",
         "size": ""
@@ -324,7 +324,7 @@ export const mensShoesPage1=[
         "brand": "Reebok",
         "title": "Propulsion 2.0 M Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,199",
+        "discountedPrice": "₹1,199",
         "price": "₹2,799",
         "discountPercent": "57% off",
         "size": ""
@@ -334,7 +334,7 @@ export const mensShoesPage1=[
         "brand": "Skechers",
         "title": "Go Walk Max-Precision Walking Shoes For Men",
         "color": "",
-        "selling_price": "₹2,657",
+        "discountedPrice": "₹2,657",
         "price": "₹5,299",
         "discountPercent": "49% off",
         "size": ""
@@ -344,7 +344,7 @@ export const mensShoesPage1=[
         "brand": "BRUTON",
         "title": "Trendy Sports Running Running Shoes For Men",
         "color": "",
-        "selling_price": "₹299",
+        "discountedPrice": "₹299",
         "price": "₹1,299",
         "discountPercent": "76% off",
         "size": ""
@@ -354,7 +354,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "MIKE (N) Running Shoes For Men",
         "color": "",
-        "selling_price": "₹942",
+        "discountedPrice": "₹942",
         "price": "₹1,699",
         "discountPercent": "44% off",
         "size": ""
@@ -364,7 +364,7 @@ export const mensShoesPage1=[
         "brand": "Asics",
         "title": "GEL-CONTEND 4B Running Shoes For Men",
         "color": "",
-        "selling_price": "₹1,693",
+        "discountedPrice": "₹1,693",
         "price": "₹3,999",
         "discountPercent": "57% off",
         "size": ""
@@ -374,7 +374,7 @@ export const mensShoesPage1=[
         "brand": "World Wear Footwear",
         "title": "Combo Pack of 2 Latest Collection Stylish Shoes",
         "color": "",
-        "selling_price": "₹399",
+        "discountedPrice": "₹399",
         "price": "₹998",
         "discountPercent": "60% off",
         "size": ""
@@ -384,7 +384,7 @@ export const mensShoesPage1=[
         "brand": "CAMPUS",
         "title": "HURRICANE Running Shoes For Men",
         "color": "",
-        "selling_price": "₹759",
+        "discountedPrice": "₹759",
         "price": "₹1,299",
         "discountPercent": "41% off",
         "size": ""
@@ -394,7 +394,7 @@ export const mensShoesPage1=[
         "brand": "asian",
         "title": "Crystal-13 Black Sports Transparent Sole Technology For...",
         "color": "",
-        "selling_price": "₹1,259",
+        "discountedPrice": "₹1,259",
         "price": "₹2,299",
         "discountPercent": "45% off",
         "size": ""

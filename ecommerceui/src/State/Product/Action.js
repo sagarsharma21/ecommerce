@@ -60,7 +60,7 @@ export const createProduct = (product) => async (dispatch) => {
 
             const {data} = await api.post(`/api/admin/products/`, product); //api.post(`${API_BASE_URL}/api/admin/products` ,product.data);
 
-                console.log("create product - ", data);
+                console.log("create new product - ", data);
             
             dispatch({type: CREATE_PRODUCT_SUCCESS, payload: data})
 

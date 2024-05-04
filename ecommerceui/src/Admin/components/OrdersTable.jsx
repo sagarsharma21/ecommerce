@@ -74,10 +74,10 @@ const OrdersTable = () => {
   };
 
   return (
-    <div className="p-10">
-      OrderTable
+    <div className="p-10  bg-[#242B2E] text-white">
+      {/* OrderTable */}
       <Card className="mt-2 bg-[#1b1b1b]" sx={{}}>
-        <CardHeader title="All Products" />
+        <CardHeader title="All Orders" />
 
         <TableContainer
           component={Paper}

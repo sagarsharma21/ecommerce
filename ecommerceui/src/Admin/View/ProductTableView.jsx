@@ -30,7 +30,7 @@ const ProductTableView = () => {
     }, []);
 
   return (
-    <div className='p-5 bg-[#242B2E] text-white '>ProductsTable
+    <div className='p-5 '>Products Table View
 
     <Card className='mt-2 bg-[#1b1b1b]' // sx={{}}
      >
@@ -51,7 +51,7 @@ const ProductTableView = () => {
             </TableHead>
             
             <TableBody>
-            {products?.products?.content?.slice(0,10).map((item) => (
+            {products?.products?.content?.map((item) => (
                 <TableRow
                   key={item.name}
                   sx={{ '&:last-child td. &:last-child th': {border: 0} }}

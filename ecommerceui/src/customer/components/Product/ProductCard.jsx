@@ -10,6 +10,9 @@ const ProductCard = ({ product }) => {
   console.log("product ", product);
 
   const handleNavigate = () => {
+
+    console.log("aniket ", product?.id);
+
     navigate(`/product/${product?.id || product?._id || 2}`)
   }
 
